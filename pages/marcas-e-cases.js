@@ -1,9 +1,11 @@
+import { Box } from '@mui/material'
 import React from 'react'
+import { BrandsAndCasesPage } from '../src/components/brandsAndCases/BrandsAndCasesPage'
 
-const BrandsAndCasesPage = () => {
+const BrandsAndCases = () => {
   return (
-   <h1>Marcas e cases</h1>
+    <BrandsAndCasesPage />
   )
 }
 
-export default BrandsAndCasesPage
+export default BrandsAndCases
