@@ -23,8 +23,8 @@ const HeroVideo = () => {
         width="100%"
         height="100%"
         style={{ borderRadius: '1rem' }}
-        src="https://www.youtube.com/embed/SMKPKGW083c"
-        title="YouTube video player"
+        src="https://www.youtube.com/embed/48KNB0oh9UA?controls=0"
+        title="Mag Embalagens"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
