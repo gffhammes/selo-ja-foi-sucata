@@ -29,36 +29,51 @@ const Gallery = () => {
 
 const ContactForm = () => {
   return (
-    <Stack direction='row'>
-      <Box>
-        <Typography variant='h2'>Quer fazer parte de um mundo mais sustentável?</Typography>
-        <Typography>
+    <Stack direction='row' spacing={10}>
+      <Box sx={{ width: 'fit-content' }}>
+        <Typography variant='h2' fontSize={42} sx={{ mb: 4, whiteSpace: 'nowrap' }} >Quer fazer parte<br/>de um mundo mais<br/>sustentável?</Typography>
+        <Typography fontSize={18} sx={{ maxWidth: '30ch' }}>
           Receba em primeira mão os novos conteúdos, eventos e oportunidades relacionados ao consumo consciente no Brasil e no mundo!
         </Typography>
       </Box>
-      <Formik
-        initialValues={{ firstName: '', lastName: '', email: '' }}
-        onSubmit={(values) => {console.log(values)}}
-      >
-        {(props) => (        
-          <Form noValidate>
-            <TextField onChange={props.handleChange} name='firstName' variant="outlined" placeholder="Nome*" value={props.values.firstName} />
-            <TextField onChange={props.handleChange} name='lastName' variant="outlined" placeholder="Sobrenome*" value={props.values.lastName} />
-            <TextField onChange={props.handleChange} name='email' variant="outlined" type='email' placeholder="O seu e-mail aqui*" value={props.values.email} />
-            <Button color='red' variant='contained' type='submit'>Enviar</Button>
-          </Form>
-        )}
-      </Formik>
+      <Box sx={{ width: '100%' }}>        
+        <Formik
+          initialValues={{ firstName: '', lastName: '', email: '' }}
+          onSubmit={(values) => {console.log(values)}}        
+        >
+          {(props) => (        
+            <Form noValidate>
+              <Typography>Seu nome*</Typography>
+              <Stack direction='row'>              
+                <TextField onChange={props.handleChange} name='firstName' variant="filled" label="Nome" value={props.values.firstName} fullWidth />
+                <TextField onChange={props.handleChange} name='lastName' variant="filled" label="Sobrenome" value={props.values.lastName} fullWidth />
+              </Stack>
+              <Typography>Seu melhor e-mail*</Typography>
+              <TextField fullWidth onChange={props.handleChange} name='email' variant="filled" type='email' label="O seu e-mail aqui" value={props.values.email} />
+              <Button color='red' variant='contained' type='submit'>Enviar</Button>
+            </Form>
+          )}
+        </Formik>
+      </Box>
     </Stack>
   )
 }
 
-
-
-
 export const GalleryAndContact = () => {
   return (
-    <Box>      
+    <Box sx={{ 
+      height: 'fit-content',       
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundImage: 'url("images/green-background-reverse-home.png")',
+      width:'100%',
+      backgroundPosition: 'bottom',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: '100%',
+      paddingTop: 8,
+    }}
+  >      
       <Container>
         <Gallery />
         <ContactForm />
