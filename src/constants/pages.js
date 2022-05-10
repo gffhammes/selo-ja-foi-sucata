@@ -15,8 +15,8 @@ export const links = [
     name: 'Marcas & Cases',
     page: 'marcas-e-cases',
   },
-  {
-    name: 'Conteúdos',
-    page: 'conteudos',
-  },
+  // {
+  //   name: 'Conteúdos',
+  //   page: 'conteudos',
+  // },
 ]

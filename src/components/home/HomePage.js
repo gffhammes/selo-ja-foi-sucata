@@ -12,13 +12,13 @@ export const HomePage = () => {
     <Box sx={{ height: '100%' }}>  
       <HeroSection />
       <Container maxWidth='sm' sx={{ py: 8 }} >
-        <Typography variant='h5' textAlign='center' >
+        <Typography fontSize={'1.5rem'} textAlign='center' >
           <strong>Junto com a Mag.</strong> nós criamos e recriamos ilimitadamente, a partir de materiais que não teriam outro fim, se não o lixo!
         </Typography>
       </Container>
       <TransformationCard />
       <Container maxWidth='sm' sx={{ py: 8 }} >
-        <Typography variant='h5' textAlign='center' >
+        <Typography fontSize={'1.5rem'} textAlign='center' >
           <strong>Do lixo ao luxo,</strong> ou melhor, da reciclagem ao sonho! Aqui o papelão se transforma e recebe uma nova chance!
         </Typography>
       </Container>

@@ -12,8 +12,14 @@ const LeftText = () => {
 
 const Stickers = () => {
   return (
-    <Box sx={{ height: '30rem', width: '30rem', position: 'relative', my: '-8rem' }}>
-      <Image layout="fill" src="/images/pink-section-stickers.png" alt="Stickers" objectFit='contain' />
+    <Box sx={{ height: '30rem', width: '30rem', position: 'relative', my: '-5rem' }}>
+      <Image
+        layout="fill"
+        src="/images/pink-section-stickers.png"
+        alt="Stickers"
+        objectFit='contain'
+        sizes='100% 100%'
+      />
     </Box>
   )
 }

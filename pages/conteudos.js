@@ -1,9 +1,10 @@
 import React from 'react'
+import { ContentsPage } from '../src/components/contents/ContentsPage'
 
-const ContentsPage = () => {
+const Contents = () => {
   return (
-   <h1>Conteúdo</h1>
+   <ContentsPage />
   )
 }
 
-export default ContentsPage
+export default Contents

@@ -1,13 +1,12 @@
-import { Box, Button, Container } from '@mui/material'
+import { Box, Button, Container, Typography } from '@mui/material'
 import React from 'react'
-import { HomeH1 } from './HomeH1'
 import Link from 'next/link'
-
+import { defaultButtonStyle } from '../../constants/buttonStyle'
 
 export const HeroSection = () => {
   return (
     <Box sx={{
-      height: '80vh',
+      height: '90vh',
       width: '100%',
       backgroundColor: '#22EFE7',
       display: 'flex',
@@ -17,10 +16,11 @@ export const HeroSection = () => {
       overflow: 'hidden',
     }}>
       <Container>
-        <HomeH1/>
+        <Typography variant='h1' fontSize={24}>Um selo sobre transformação:</Typography>
+        <Typography variant='h1' sx={{ mt: 2 }}>Encontrou a<br/>caixinha sorrindo?</Typography>
         <Link href='sobre-nos' passHref>
           <a>
-            <Button color='red' variant='contained'>Saiba o que significa!</Button>
+            <Button color='red' variant='contained' sx={{ ...defaultButtonStyle, mt: 3 }}>Saiba o que significa!</Button>
           </a>
         </Link>
       </Container>
