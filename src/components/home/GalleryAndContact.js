@@ -1,6 +1,7 @@
 import { Box, Button, Container, Grid, Stack, TextField, Typography } from "@mui/material"
 import { Formik, Form } from "formik"
 import Image from 'next/image'
+import { defaultButtonStyle } from "../../constants/buttonStyle"
 
 const galleryImages = [
   '/images/gallery01.png',
@@ -10,6 +11,8 @@ const galleryImages = [
   '/images/gallery05.png',
   '/images/gallery06.png',
 ]
+
+const textFieldStyle = { backgroundColor: 'white.main', borderRadius: '.5rem' }
 
 const Gallery = () => {
   return (
@@ -29,7 +32,7 @@ const Gallery = () => {
 
 const ContactForm = () => {
   return (
-    <Stack direction='row' spacing={10}>
+    <Stack direction='row' spacing={10} alignItems='center'>
       <Box sx={{ width: 'fit-content' }}>
         <Typography variant='h2' fontSize={42} sx={{ mb: 4, whiteSpace: 'nowrap' }} >Quer fazer parte<br/>de um mundo mais<br/>sustentável?</Typography>
         <Typography fontSize={18} sx={{ maxWidth: '30ch' }}>
@@ -43,14 +46,14 @@ const ContactForm = () => {
         >
           {(props) => (        
             <Form noValidate>
-              <Typography>Seu nome*</Typography>
-              <Stack direction='row'>              
-                <TextField onChange={props.handleChange} name='firstName' variant="filled" label="Nome" value={props.values.firstName} fullWidth />
-                <TextField onChange={props.handleChange} name='lastName' variant="filled" label="Sobrenome" value={props.values.lastName} fullWidth />
+              <Typography gutterBottom>Seu nome*</Typography>
+              <Stack direction='row' spacing={2}>              
+                <TextField sx={textFieldStyle} color='pink' onChange={props.handleChange} name='firstName' variant="outlined" placeholder="Nome" value={props.values.firstName} fullWidth />
+                <TextField sx={textFieldStyle} color='pink' onChange={props.handleChange} name='lastName' variant="outlined" placeholder="Sobrenome" value={props.values.lastName} fullWidth />
               </Stack>
-              <Typography>Seu melhor e-mail*</Typography>
-              <TextField fullWidth onChange={props.handleChange} name='email' variant="filled" type='email' label="O seu e-mail aqui" value={props.values.email} />
-              <Button color='red' variant='contained' type='submit'>Enviar</Button>
+              <Typography sx={{ mt: 3 }} gutterBottom>Seu melhor e-mail*</Typography>
+              <TextField sx={textFieldStyle} fullWidth color='pink' onChange={props.handleChange} name='email' variant="outlined" type='email' placeholder="O seu e-mail aqui" value={props.values.email} />
+              <Button sx={{ ...defaultButtonStyle, mt: 3 }} fullWidth color='red' variant='contained' type='submit'>Enviar</Button>
             </Form>
           )}
         </Formik>
@@ -74,9 +77,11 @@ export const GalleryAndContact = () => {
       paddingTop: 8,
     }}
   >      
-      <Container>
-        <Gallery />
-        <ContactForm />
+      <Container sx={{ py: 10 }}>
+        <Stack spacing={10}>          
+          <Gallery />
+          <ContactForm />
+        </Stack>
       </Container>
     </Box>
   )
