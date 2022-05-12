@@ -8,7 +8,7 @@ import BlueSpike from '../../../public/vectors/blue-spike.svg'
 const Text = () => {
   return (
     <Box flex='45ch'>
-      <Stack spacing={4} sx={{ width: '45ch' }}>
+      <Stack spacing={4} sx={{ maxWidth: '45ch' }}>
         <Box sx={{ position: 'relative', height: '5rem', width: '15rem' }} >
           <Image
             src='/images/selo-ja-foi-sucata-rosa.png'
@@ -37,7 +37,7 @@ const ImageAndElements = () => {
   return (
     <Box sx={{ flex: '10rem' }}>
       <Box sx={{ position: 'relative', height: '100%' }} >
-        <BlueSpike style={{ zIndex: 10, position: 'absolute', transform: 'translate(-50%, 10%)' }} />
+        {/* <BlueSpike style={{ zIndex: 10, position: 'absolute', transform: 'translate(-50%, 10%)' }} /> */}
         <Image
           src='/images/IMG_1112.png'
           alt='Selo Já Foi Sucata'
@@ -46,7 +46,7 @@ const ImageAndElements = () => {
           objectPosition='right'
           style={{ zIndex: 5 }}
         />
-        <GreenCircle style={{ zIndex: 1, position: 'absolute', bottom: 0, right: 0, transform: 'translate(45%, 30%)' }} />
+        {/* <GreenCircle style={{ zIndex: 1, position: 'absolute', bottom: 0, right: 0, transform: 'translate(45%, 30%)' }} /> */}
       </Box>
     </Box>
   )
@@ -55,7 +55,7 @@ const ImageAndElements = () => {
 export const SeloSection = () => {
   return (
     <Container>
-      <Stack direction='row' justifyContent='space-between'>
+      <Stack direction={{ xs: 'column', md: 'row' }} justifyContent='space-between'>
         <Text />
         <ImageAndElements />
       </Stack>

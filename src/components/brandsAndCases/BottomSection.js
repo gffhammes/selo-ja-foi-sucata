@@ -33,7 +33,7 @@ const Text = () => {
 const Brands = () => {
   return (
     <Stack spacing={4}>
-      <Stack direction='row' spacing={4}>
+      <Stack direction={{ xs: 'column', md: 'row' }} spacing={4}>
         {brands.slice(0, 2).map((brand, index) => (
           <Box key={index} sx={{ flex: 1 }}>
             <Paper elevation={0} sx={{ p: 2, width: '18rem', borderRadius: '.75rem' }}>
@@ -49,7 +49,7 @@ const Brands = () => {
           </Box>
         ))}
       </Stack>
-      <Stack direction='row' spacing={4} sx={{ transform: 'translateX(-20%)' }}>
+      <Stack direction={{ xs: 'column', md: 'row' }} spacing={4} sx={{ transform: { xs: '', md: 'translateX(-20%)' } }}>
         {brands.slice(2, 4).map((brand, index) => (
           <Box key={index} sx={{ flex: 1 }}>
             <Paper elevation={0} sx={{ p: 2, width: '18rem', borderRadius: '.75rem' }}>
@@ -82,7 +82,7 @@ export const BottomSection = () => {
       }}
     >
       <Container>        
-        <Stack direction='row' spacing={2} justifyContent='space-between' alignItems='center'>
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={2} justifyContent='space-between' alignItems='center'>
           <Text />
           <Brands />
         </Stack>

@@ -51,8 +51,8 @@ export const Navbar = () => {
               </ul>
             </div> :
 
-            <IconButton onClick={handleMenuOpenToggle}>
-              <MenuIcon />
+            <IconButton onClick={handleMenuOpenToggle} sx={{ zIndex: 999 }}>
+              {menuOpen ? <CloseIcon /> : <MenuIcon />}
             </IconButton>
 
             }
@@ -67,26 +67,21 @@ export const Navbar = () => {
                 backgroundColor: 'pink.main',
                 transition: '300ms ease-out',
                 transform: menuOpen ? 'translateX(0)' : 'translateX(100%)',
+                boxShadow: menuOpen ? 22 : 0,
               }}
             >
-              <Stack>
                 
-                <IconButton onClick={handleMenuOpenToggle}>
-                  <CloseIcon />
-                </IconButton>
-
-                <div className="navlinks">
-                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                    {links.map((link) => (
-                      <li key={link.name} className='nav-item'>
-                        <Link href={link.page} passHref >
-                          <a  className='nav-link'>{link.name}</a>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Stack>
+              <div style={{ paddingTop: '5rem' }} >
+                <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', padding: '1rem' }}>
+                  {links.map((link) => (
+                    <li key={link.name} style={{ listStyle: 'none' }} onClick={handleMenuOpenToggle}>
+                      <Link href={link.page} passHref>
+                        <a className='nav-link'>{link.name}</a>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </Box>
 
             

@@ -18,7 +18,7 @@ export const HeroSection = () => {
       <Container>
         <Typography variant='h1' fontSize={24}>Um selo sobre transformação:</Typography>
         <Typography variant='h1' sx={{ mt: 2 }}>Encontrou a<br/>caixinha sorrindo?</Typography>
-        <Link href='sobre-nos' passHref>
+        <Link href='/sobre-nos' passHref>
           <a>
             <Button color='red' variant='contained' sx={{ ...defaultButtonStyle, mt: 3 }}>Saiba o que significa!</Button>
           </a>

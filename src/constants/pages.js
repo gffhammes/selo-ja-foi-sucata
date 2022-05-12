@@ -5,15 +5,15 @@ export const links = [
   },
   {
     name: 'Sobre nós',
-    page: 'sobre-nos',
+    page: '/sobre-nos',
   },
   {
     name: 'Processo',
-    page: 'processo',
+    page: '/processo',
   },
   {
     name: 'Marcas & Cases',
-    page: 'marcas-e-cases',
+    page: '/marcas-e-cases',
   },
   // {
   //   name: 'Conteúdos',

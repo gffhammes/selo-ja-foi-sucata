@@ -13,7 +13,7 @@ export const PageHeadTitle = () => {
   const { pathname } = router;
 
   const getPageName = () => {
-    const link = links.find(link => link.page === pathname.replace('/', ''));
+    const link = links.find(link => link.page === pathname);
     return link.name;
   }
 

@@ -59,7 +59,7 @@ export const ProcessSteps = () => {
       <Stack spacing={8} sx={{ mt: 8 }}>
         {steps.map((step, index) => (
           <Box key={index}>
-            <Stack direction='row' alignItems='center' spacing={4}>
+            <Stack direction={{ xs: 'column', md: 'row' }} alignItems='center' spacing={4}>
               <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '10rem', position: 'relative' }}>          
                 <Box sx={{ height: '4rem', width: '4rem', position: 'absolute', zIndex: 10 }}>
                   <Image src={`/images/${step.icon}`} alt={step.title} layout='fill' objectFit='contain' />
@@ -72,10 +72,10 @@ export const ProcessSteps = () => {
                 <Typography fontSize={24}>{`${index + 1}. ${step.title}`}</Typography>
                 <Typography>{step.description}</Typography>
               </Box>
-              <Box>
-                <Stack direction='row' spacing={2}>
+              <Box sx={{ width: '100%' }}>
+                <Stack direction='row' spacing={2} sx={{ width: '100%' }}>
                   {step.images.map((image, index) => (
-                    <Box key={index} sx={{ position: 'relative', height: '10rem', width: '10rem' }}>
+                    <Box key={index} sx={{ position: 'relative', height: '10rem', width: { xs: '100%', md: '10rem' } }}>
                       <Image
                         src={`/images/${image}`}
                         layout='fill'

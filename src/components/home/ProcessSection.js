@@ -38,8 +38,8 @@ export const ProcessSection = () => {
           </Grid>
         ))}
         <Grid item xs={12} sx={{ display: 'flex' }}>     
-          <Link href='processo' passHref >
-            <Button fullWidth={{ xs: true, md: false }} color='red' variant='contained' sx={{ ...defaultButtonStyle, mx: 'auto', mt: 6 }}>Conheça mais o processo!</Button>
+          <Link href='/processo' passHref >
+            <Button color='red' variant='contained' sx={{ ...defaultButtonStyle, width: { xs: '100%', md: 'fit-content' }, mx: 'auto', mt: 6 }}>Conheça mais o processo!</Button>
           </Link>     
         </Grid>
       </Grid>

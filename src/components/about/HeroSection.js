@@ -37,7 +37,7 @@ export const HeroSection = () => {
   return (
     <Box
       sx={{        
-        height: '80vh',
+        height: { xs: 'fit-content', md: '80vh' },
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -46,10 +46,11 @@ export const HeroSection = () => {
         objectFit: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%',
+        pt: '10rem'
       }}
     >
       <Container>        
-        <Stack direction='row' spacing={2}>
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={2}>
           <HeroText />
           <HeroVideo />
         </Stack>

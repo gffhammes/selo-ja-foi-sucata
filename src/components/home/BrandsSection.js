@@ -8,8 +8,8 @@ const LeftText = () => {
     <Box sx={{ flex: '60%' }}>
       <Typography variant='h2' fontSize={40}   gutterBottom>Conheça algumas marcas conscientes</Typography>
       <Typography fontSize={24}>que estão com a gente nessa e que se preocupam em contribuir com um futuro melhor dentro dos seus negócios.</Typography>
-      <Link href='marcas-e-cases' passHref >
-        <Button fullWidth={{ xs: true, md: false }} color='red' variant='contained' sx={{ ...defaultButtonStyle, mt: 4 }}>Ver todos os cases</Button>
+      <Link href='/marcas-e-cases' passHref >
+        <Button color='red' variant='contained' sx={{ ...defaultButtonStyle, width: { xs: '100%', md: 'fit-content' }, mt: 4 }}>Ver todos os cases</Button>
       </Link>
     </Box>
   )
