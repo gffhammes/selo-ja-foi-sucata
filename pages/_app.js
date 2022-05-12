@@ -29,6 +29,8 @@ const theme = createTheme({
     blue: palette.augmentColor({ color: { [500]: '#22EFE7' } }),
     red: palette.augmentColor({ color: { main: '#EC1906' } }),
     pink: palette.augmentColor({ color: { main: '#FF39E3' } }),
+    green: palette.augmentColor({ color: { main: '#8aff24' } }),
+    yellow: palette.augmentColor({ color: { main: '#fff600' } }),
     white: palette.augmentColor({ color: { main: '#fff' } }),
   }
 })

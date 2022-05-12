@@ -6,22 +6,37 @@ import { links } from '../../constants/pages'
 import { useWindowSize } from '../../hooks/useWindowSize'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { useWindowScroll } from '../../hooks/useWindowScroll'
+import { useRouteData } from '../../hooks/useRouteData'
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { width } = useWindowSize();
+  const scroll = useWindowScroll();
+  const { name, page, navbarColor } = useRouteData();
 
   const handleMenuOpenToggle = () => {
     setMenuOpen(current => !current);
   }
 
   return (
-    <nav className="navbar" style={{ zIndex: 999, position: 'fixed' }}>
-      <Container>
+    <Box
+      component='nav'
+      sx={{
+        zIndex: 999,
+        position: 'fixed',
+        width: '100%',
+        height: 'fit-content',
+        // transition: '300ms ease',
+        backgroundColor: navbarColor,
+        borderBottom: scroll > 80 ? '1px solid #00000014' : 'none',
+      }}
+    >
+      <Container sx={{ py: '1rem' }}>
         <Stack direction='row' justifyContent='space-between' alignItems='center' height={'100%'}>
           <Link href='/' passHref>
             <a>
-              <Box sx={{ position: 'relative', height: '6rem', width: '10rem' }}>
+              <Box sx={{ position: 'relative', height: '4rem', width: '10rem' }}>
                 <Image
                   src='/images/logo.png'
                   alt='Selo Já Foi Sucata'
@@ -31,22 +46,17 @@ export const Navbar = () => {
               </Box>
             </a>
           </Link>
-            {/* <a href="#" className="ham">
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
-            </a> */}
 
             {width > 960 ?
             
             <div className="navlinks">
               <ul style={{ display: 'flex', gap: '1rem' }}>
                 {links.map((link) => (
-                  <li key={link.name} className='nav-item'>
+                  <Box component='li' key={link.name} sx={{ listStyle: 'none' }}>
                     <Link href={link.page} passHref >
-                      <a  className='nav-link'>{link.name}</a>
+                      <a className='nav-link' style={{ backgroundColor: page === link.page ? 'white' : '' }}>{link.name}</a>
                     </Link>
-                  </li>
+                  </Box>
                 ))}
               </ul>
             </div> :
@@ -87,6 +97,6 @@ export const Navbar = () => {
             
         </Stack>
       </Container>
-    </nav>
+    </Box>
   )
 }
