@@ -46,7 +46,7 @@ export const HeroSection = () => {
         objectFit: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%',
-        pt: '10rem'
+        pt: 20,
       }}
     >
       <Container>        

@@ -51,7 +51,7 @@ const steps = [
 
 export const ProcessSteps = () => {
   return (
-    <Container sx={{ position: 'relative', paddingTop: '15rem' }}>
+    <Container sx={{ position: 'relative', pt: 20 }}>
       <Typography variant='h1' textAlign='center' sx={{ textDecoration: 'underline' }}>Processo</Typography>
       <Typography fontSize={24} textAlign='center' sx={{ maxWidth: '55ch', m: 'auto', mt: 3 }}>
         Bora conhecer mais do processo que, através de uma economia circular, dá uma nova chance ao que seria considerado “lixo”?

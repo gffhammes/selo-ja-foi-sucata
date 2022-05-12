@@ -24,7 +24,7 @@ const Text = () => {
           <br/><br/>
           Por isso, se você encontrou a caixinha sorrindo, saiba que você está comprando ou recebendo uma embalagem de papelão reciclado e 100% reciclável, que #JáFoiSucata!
         </Typography>
-        <Box sx={{ display: 'flex', gap: '.5rem', paddingTop: 2 }}>
+        <Box sx={{ display: 'flex', gap: '.5rem', pt: 2 }}>
           <Package />
           <Typography sx={{ color: 'rgb(236, 25, 6)' }}>Conheça nosso processo</Typography>
         </Box>

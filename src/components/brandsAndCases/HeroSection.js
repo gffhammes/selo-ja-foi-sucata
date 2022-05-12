@@ -78,7 +78,7 @@ export const HeroSection = () => {
         objectFit: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%',
-        paddingTop: 20
+        pt: 20
       }}
     >
       <Container>        

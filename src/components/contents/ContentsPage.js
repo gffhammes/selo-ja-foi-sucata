@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export const ContentsPage = () => {
   return (
-    <Box bgcolor='pink.main' sx={{ height: '100vh', width: '100%', paddingTop: '20rem' }}>
+    <Box bgcolor='pink.main' sx={{ height: '100vh', width: '100%', pt: '20rem' }}>
       <Container>
         <Stack direction='row' justifyContent='space-between'>          
           <Box>

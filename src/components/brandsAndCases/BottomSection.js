@@ -78,7 +78,7 @@ export const BottomSection = () => {
         objectFit: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100%',
-        paddingTop: 30,
+        pt: 30,
       }}
     >
       <Container>        

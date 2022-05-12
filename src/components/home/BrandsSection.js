@@ -26,7 +26,7 @@ const BrandsImage = () => {
 
 export const BrandsSection = () => {
   return (
-    <Container sx={{ paddingTop: { xs: 20, md: 10 } }}>
+    <Container sx={{ pt: { xs: 20, md: 10 } }}>
       <Stack direction={{ xs: 'column', md: 'row' }} spacing={4} justifyContent='space-between' alignItems='center' >
         <LeftText />
         <BrandsImage />
