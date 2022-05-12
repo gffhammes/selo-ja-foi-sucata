@@ -75,7 +75,7 @@ export const Footer = () => {
     <footer>
       <Box bgcolor='pink.main' sx={{ py: 4, width: '100%' }}>
         <Container>
-          <Stack direction='row' justifyContent='space-between' alignItems='flex-start'>            
+          <Stack direction={{ xs: 'column', md: 'row' }} justifyContent='space-between' alignItems='flex-start'>            
             <FooterMain />
             <FooterSiteMap />
             <FooterSocial />

@@ -17,10 +17,10 @@ const textFieldStyle = { backgroundColor: 'white.main', borderRadius: '.5rem' }
 const Gallery = () => {
   return (
     <div>
-      <Grid container spacing={3}>
+      <Grid container spacing={{ xs: 2, md: 3 }}>
         {galleryImages.map((image, index) => (
-          <Grid item xs={12} lg={4} key={index}>
-            <Box sx={{ height: '20rem', width: '100%', position: 'relative' }}>
+          <Grid item xs={6} sm={6} md={4} key={index}>
+            <Box sx={{ height: { xs: '10rem', md: '20rem' }, width: '100%', position: 'relative' }}>
               <Image src={image} alt={index} layout='fill' objectFit='cover' style={{ borderRadius: '1rem' }}/>
             </Box>
           </Grid>
@@ -32,9 +32,9 @@ const Gallery = () => {
 
 const ContactForm = () => {
   return (
-    <Stack direction='row' spacing={10} alignItems='center'>
+    <Stack direction={{ xs: 'column', md: 'row' }} spacing={15} alignItems='center'>
       <Box sx={{ width: 'fit-content' }}>
-        <Typography variant='h2' fontSize={42} sx={{ mb: 4, whiteSpace: 'nowrap' }} >Quer fazer parte<br/>de um mundo mais<br/>sustentável?</Typography>
+        <Typography variant='h2' fontSize={42} sx={{ mb: 4, whiteSpace: { xs: 'normal', md: 'nowrap' } }} >Quer fazer parte<br/>de um mundo mais<br/>sustentável?</Typography>
         <Typography fontSize={18} sx={{ maxWidth: '30ch' }}>
           Receba em primeira mão os novos conteúdos, eventos e oportunidades relacionados ao consumo consciente no Brasil e no mundo!
         </Typography>
@@ -73,12 +73,11 @@ export const GalleryAndContact = () => {
       width:'100%',
       backgroundPosition: 'bottom',
       backgroundRepeat: 'no-repeat',
-      backgroundSize: '100%',
-      paddingTop: 8,
+      backgroundSize: '100%'
     }}
   >      
-      <Container sx={{ py: 10 }}>
-        <Stack spacing={10}>          
+      <Container sx={{ py: 20 }}>
+        <Stack spacing={20}>          
           <Gallery />
           <ContactForm />
         </Stack>

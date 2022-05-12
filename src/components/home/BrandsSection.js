@@ -9,7 +9,7 @@ const LeftText = () => {
       <Typography variant='h2' fontSize={40}   gutterBottom>Conheça algumas marcas conscientes</Typography>
       <Typography fontSize={24}>que estão com a gente nessa e que se preocupam em contribuir com um futuro melhor dentro dos seus negócios.</Typography>
       <Link href='marcas-e-cases' passHref >
-        <Button color='red' variant='contained' sx={{ ...defaultButtonStyle, mt: 4 }}>Ver todos os cases</Button>
+        <Button fullWidth={{ xs: true, md: false }} color='red' variant='contained' sx={{ ...defaultButtonStyle, mt: 4 }}>Ver todos os cases</Button>
       </Link>
     </Box>
   )
@@ -17,7 +17,7 @@ const LeftText = () => {
 
 const BrandsImage = () => {
   return (
-    <Box sx={{ position: 'relative', height: '37rem', width: '100%' }}>
+    <Box sx={{ position: 'relative', height: { xs: '20rem', md: '37rem' }, width: '100%' }}>
       <Image src='/images/brands-image.png' layout='fill' objectFit='contain' alt='Marcas'/>
     </Box>
   )
@@ -26,8 +26,8 @@ const BrandsImage = () => {
 
 export const BrandsSection = () => {
   return (
-    <Container sx={{ p: 10 }}>
-      <Stack direction='row' spacing={4} justifyContent='space-between' alignItems='center' >
+    <Container sx={{ paddingTop: { xs: 20, md: 10 } }}>
+      <Stack direction={{ xs: 'column', md: 'row' }} spacing={4} justifyContent='space-between' alignItems='center' >
         <LeftText />
         <BrandsImage />
       </Stack>

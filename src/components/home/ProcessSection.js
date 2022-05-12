@@ -31,7 +31,7 @@ const processes = [
 export const ProcessSection = () => {
   return (
     <Container sx={{ mb: 10 }}>
-      <Grid container>
+      <Grid container spacing={4}>
         {processes.map((process, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>          
             <ProcessIconText image={process.image} text={process.text} background={process.background} />
@@ -39,7 +39,7 @@ export const ProcessSection = () => {
         ))}
         <Grid item xs={12} sx={{ display: 'flex' }}>     
           <Link href='processo' passHref >
-            <Button color='red' variant='contained' sx={{ ...defaultButtonStyle, mx: 'auto', mt: 6 }}>Conheça mais o processo!</Button>
+            <Button fullWidth={{ xs: true, md: false }} color='red' variant='contained' sx={{ ...defaultButtonStyle, mx: 'auto', mt: 6 }}>Conheça mais o processo!</Button>
           </Link>     
         </Grid>
       </Grid>

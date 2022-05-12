@@ -6,8 +6,18 @@ import Arrow from '../../../public/vectors/arrow.svg'
 export const TransformationCard = () => {
   return (
     <Container>
-      <Box sx={{ backgroundColor: '#22EFE7', width: 'fit-content', mx: 'auto', px: 8, py: 6, borderRadius: '20rem', boxShadow: '0 0 40px #22EFE7' }}>
-        <Stack direction='row' spacing={6} alignItems='center'>
+      <Box
+        sx={{
+          backgroundColor: '#22EFE7',
+          width: 'fit-content',
+          mx: 'auto',
+          px: { xs: 1, md: 8 },
+          py: 6,
+          borderRadius: '20rem',
+          boxShadow: '0 0 40px #22EFE7'
+        }}
+      >
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={6} alignItems='center'>
           <Stack alignItems='center'>
             <Typography variant='h3' fontSize={58} fontWeight={500}>+145.000</Typography>
             <Typography><strong>Quilos</strong> de sucata</Typography>
