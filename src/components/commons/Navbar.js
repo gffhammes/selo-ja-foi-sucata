@@ -28,7 +28,7 @@ export const Navbar = () => {
         width: '100%',
         height: 'fit-content',
         // transition: '300ms ease',
-        backgroundColor: navbarColor,
+        backgroundColor: scroll > 80 ? navbarColor : 'transparent',
         borderBottom: scroll > 80 ? '1px solid #00000014' : 'none',
       }}
     >
