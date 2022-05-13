@@ -17,8 +17,8 @@ const Stickers = () => {
         height: { xs: '20rem', md: '30rem' },
         width: { xs: '100%', md: '30rem' },
         position: 'relative',
-        mt: { xs: 0, md: '-5rem' },
-        mb: { xs: '-3rem !important', md: '-5rem' },
+        mt: { xs: 0, md: '-4.5rem !important' },
+        mb: { xs: '-3rem !important', md: '-4.5rem !important' },
       }}
     >
       <Image
@@ -40,7 +40,6 @@ export const PinkSection = () => {
           direction={{ xs: 'column', md: 'row' }}
           justifyContent='space-between'
           alignItems={{ xs: 'flex-start', md: 'center' }}
-          sx={{ pt: { xs: 10, md: 0 } }}
           spacing={4}
         >          
           <LeftText />

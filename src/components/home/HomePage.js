@@ -1,7 +1,8 @@
 import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
 import { BrandsSection } from './BrandsSection'
-import { GalleryAndContact } from './GalleryAndContact'
+import { ContactForm } from './ContactForm'
+import { Gallery } from './Gallery'
 import { HeroSection } from './HeroSection'
 import { PinkSection } from './PinkSection'
 import { ProcessSection } from './ProcessSection'
@@ -25,7 +26,8 @@ export const HomePage = () => {
       <ProcessSection />
       <PinkSection />
       <BrandsSection />
-      <GalleryAndContact />
+      <Gallery />
+      <ContactForm />
     </Box>
   )
 }
