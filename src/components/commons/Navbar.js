@@ -1,7 +1,7 @@
 import { Box, Button, Container, IconButton, Stack } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import { links } from '../../constants/pages'
 import { useWindowSize } from '../../hooks/useWindowSize'
 import MenuIcon from '@mui/icons-material/Menu';
@@ -15,6 +15,8 @@ export const Navbar = () => {
   const scroll = useWindowScroll();
   const { name, page, navbarColor } = useRouteData();
 
+  const isScrolled = useMemo(() => scroll > 0, [scroll])
+
   const handleMenuOpenToggle = () => {
     setMenuOpen(current => !current);
   }
@@ -27,21 +29,22 @@ export const Navbar = () => {
         position: 'fixed',
         width: '100%',
         height: 'fit-content',
-        // transition: '300ms ease',
-        backgroundColor: scroll > 80 ? navbarColor : 'transparent',
-        borderBottom: scroll > 80 ? '1px solid #00000014' : 'none',
+        transition: '150ms ease',
+        backgroundColor: isScrolled ? navbarColor : 'transparent',
+        boxShadow: isScrolled ? 20 : 0,
       }}
     >
-      <Container sx={{ py: '1rem' }}>
+      <Container sx={{ py: isScrolled ? { xs: '.25rem', md: '1rem' } : { xs: '1rem', md: '3rem' }, transition: '150ms ease' }}>
         <Stack direction='row' justifyContent='space-between' alignItems='center' height={'100%'}>
           <Link href='/' passHref>
             <a>
-              <Box sx={{ position: 'relative', height: '4rem', width: '10rem' }}>
+              <Box sx={{ position: 'relative', height: { xs: '3rem', md: '4rem' }, width: '10rem' }}>
                 <Image
                   src='/images/logo.png'
                   alt='Selo Já Foi Sucata'
                   layout='fill'
                   objectFit='contain'
+                  objectPosition='left'
                 />
               </Box>
             </a>
@@ -61,8 +64,8 @@ export const Navbar = () => {
               </ul>
             </div> :
 
-            <IconButton onClick={handleMenuOpenToggle} sx={{ zIndex: 999 }}>
-              {menuOpen ? <CloseIcon /> : <MenuIcon />}
+            <IconButton onClick={handleMenuOpenToggle} sx={{ zIndex: 999 }} size="large" >
+              {menuOpen ? <CloseIcon fontSize="large" /> : <MenuIcon fontSize="large" />}
             </IconButton>
 
             }
