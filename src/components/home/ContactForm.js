@@ -9,9 +9,9 @@ export const ContactForm = () => {
   return (
     <Box bgcolor='green.main' sx={{ py: { xs: 10, md: 15 }, zIndex: 5, position: 'relative' }}>
       <Container>        
-        <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 5, md: 15 }} alignItems='center'>
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 5, md: 15 }} alignItems={{ xs: 'flex-start', sm: 'center', md: 'flex-start' }}>
           <Box sx={{ width: 'fit-content' }}>
-            <Stack direction={{ xs: 'column', sm: 'row', md: 'column' }} justifyContent='space-between' alignItems='center' spacing={4}>              
+            <Stack direction={{ xs: 'column', sm: 'row', md: 'column' }} justifyContent='space-between' alignItems={{ xs: 'flex-start', sm: 'center', md: 'flex-start' }} spacing={4}>              
               <Typography variant='h2' fontSize={42} sx={{ whiteSpace: { xs: 'normal', md: 'nowrap' } }} >Quer fazer parte<br/>de um mundo mais<br/>sustentável?</Typography>
               <Typography fontSize={18} sx={{ maxWidth: '30ch' }}>
                 Receba em primeira mão os novos conteúdos, eventos e oportunidades relacionados ao consumo consciente no Brasil e no mundo!
