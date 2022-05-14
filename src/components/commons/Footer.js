@@ -55,18 +55,26 @@ const FooterSocial = () => {
   return (
     <Stack spacing={2}>
       <Typography>Siga-nos nas redes sociais</Typography>
-      <Stack direction='row' alignItems='center' spacing={1}>
-        <Box bgcolor='black' sx={iconStyle}>
-          <InstagramIcon color='white'/>
-        </Box>
-        <Typography fontWeight={300} sx={{ color: '#fff' }}>@selojafoisucata</Typography>
-      </Stack>
-      <Stack direction='row' alignItems='center' spacing={1}>
-        <Box bgcolor='black' sx={iconStyle}>
-          <InstagramIcon color='white'/>
-        </Box>
-        <Typography fontWeight={300} sx={{ color: '#fff' }}>@magnaniembalagens</Typography>
-      </Stack>
+      <Link href='https://www.instagram.com/selojafoisucata/' passHref>
+        <a target='_blank'>          
+          <Stack direction='row' alignItems='center' spacing={1}>
+            <Box bgcolor='black' sx={iconStyle}>
+              <InstagramIcon color='white'/>
+            </Box>
+            <Typography fontWeight={300} sx={{ color: '#fff' }}>@selojafoisucata</Typography>
+          </Stack>
+        </a>
+      </Link>
+      <Link href='https://www.instagram.com/magembalagens/' passHref>
+        <a target='_blank'>      
+          <Stack direction='row' alignItems='center' spacing={1}>
+            <Box bgcolor='black' sx={iconStyle}>
+              <InstagramIcon color='white'/>
+            </Box>
+            <Typography fontWeight={300} sx={{ color: '#fff' }}>@magembalagens</Typography>
+          </Stack>
+        </a>
+      </Link>
     </Stack>
   )
 }

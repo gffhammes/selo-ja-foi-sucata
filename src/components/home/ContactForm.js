@@ -2,10 +2,38 @@ import { Box, Button, Container, Grid, Stack, TextField, Typography } from "@mui
 import { Formik, Form } from "formik"
 import Image from 'next/image'
 import { defaultButtonStyle } from "../../constants/buttonStyle"
+import { Input } from "../commons/form/Input"
 
 const textFieldStyle = { backgroundColor: 'white.main', borderRadius: '.5rem' }
 
 export const ContactForm = () => {
+
+  const validate = (values) => {
+    const errors = {};
+
+    
+    if (!values.firstName) {
+      errors.firstName = 'Obrigatório';
+    }
+
+    if (!values.lastName) {
+      errors.lastName = 'Obrigatório';
+    }
+  
+    if (!values.email) {
+      errors.email = 'Obrigatório';
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+      errors.email = 'Email inválido';
+    }
+  
+    return errors;
+  };
+
+  const handleSubmit = (values, { resetForm }) => {
+    console.log(values)
+    resetForm();
+  }
+
   return (
     <Box bgcolor='green.main' sx={{ py: { xs: 10, md: 15 }, zIndex: 5, position: 'relative' }}>
       <Container>        
@@ -21,17 +49,21 @@ export const ContactForm = () => {
           <Box sx={{ width: '100%' }}>        
             <Formik
               initialValues={{ firstName: '', lastName: '', email: '' }}
-              onSubmit={(values) => {console.log(values)}}        
+              validate={validate}
+              onSubmit={handleSubmit}   
+              validateOnBlur={false}     
+              validateOnChange={false}
+              enableReinitialize
             >
               {(props) => (        
                 <Form noValidate>
                   <Typography gutterBottom>Seu nome*</Typography>
                   <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>              
-                    <TextField sx={textFieldStyle} color='pink' onChange={props.handleChange} name='firstName' variant="outlined" placeholder="Nome" value={props.values.firstName} fullWidth />
-                    <TextField sx={textFieldStyle} color='pink' onChange={props.handleChange} name='lastName' variant="outlined" placeholder="Sobrenome" value={props.values.lastName} fullWidth />
+                    <Input name='firstName' placeholder="Nome" />
+                    <Input name='lastName' placeholder="Sobrenome" />
                   </Stack>
                   <Typography sx={{ mt: 3 }} gutterBottom>Seu melhor e-mail*</Typography>
-                  <TextField sx={textFieldStyle} fullWidth color='pink' onChange={props.handleChange} name='email' variant="outlined" type='email' placeholder="O seu e-mail aqui" value={props.values.email} />
+                  <Input name='email' placeholder="O seu e-mail aqui" type='email' />
                   <Button sx={{ ...defaultButtonStyle, mt: 3 }} fullWidth color='red' variant='contained' type='submit'>Enviar</Button>
                 </Form>
               )}
