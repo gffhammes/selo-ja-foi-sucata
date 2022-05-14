@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { links } from '../../constants/pages'
+import LogoSelo from '../../../public/vectors/logo-selo-ja-foi-sucata.svg'
+import LogoMag from '../../../public/vectors/logo-mag.svg'
 
 const iconStyle = {
   p: 1,
@@ -17,65 +19,64 @@ const iconStyle = {
 
 const FooterMain = () => {
   return (
-    <Stack>
-      <Box sx={{ position: 'relative', height: '4rem', width: '7rem' }}>
-        <Image src='/images/logo.png' layout='fill' objectFit='contain' alt='Selo Já Foi Sucata'/>
-      </Box>
-      <Box>        
-        <Typography>Todos os direitos reservados ao Selo Já Foi Sucata</Typography>
-        <Typography>Iniciativa sustentável da empresa Magnani Embalagens</Typography>
-      </Box>
-      <Box>
-        <Typography>CNPJ: 00.000.000/0001-00</Typography>
-        <Typography>Fone: (47) 9 9999-9999</Typography>
-        <Typography>Rua João Silva, n° 123 - Rio do Sul</Typography>
-      </Box>
+    <Stack spacing={4}>
+      <Stack direction='row' alignItems='center' spacing={3}>        
+        <LogoMag height="75" width="115" />
+        <LogoSelo height="75" width="115" />
+      </Stack>
+      <Stack sx={{ color: '#fff' }} spacing={{ xs: 2, md: 0 }}>        
+        <Typography fontWeight={300}>Todos os direitos reservados ao Selo Já Foi Sucata</Typography>
+        <Typography fontWeight={300}>Iniciativa sustentável da empresa Magnani Embalagens</Typography>
+      </Stack>
+      <Stack sx={{ color: '#fff' }}>
+        <Typography fontWeight={300}>CNPJ: 00.000.000/0001-00</Typography>
+        <Typography fontWeight={300}>Fone: (47) 9 9999-9999</Typography>
+        <Typography fontWeight={300}>Rua João Silva, n° 123 - Rio do Sul</Typography>
+      </Stack>
     </Stack>
   )
 }
 
 const FooterSiteMap = () => {
   return (
-    <div className="site-map">
-      <ul style={{ display: 'flex', gap: '1rem', flexDirection: 'column' }}>
+      <ul style={{ display: 'flex', gap: '1.5rem', flexDirection: 'column' }}>
         {links.map((link) => (
-          <li key={link.name} className='nav-item'>
+          <li key={link.name}>
             <Link href={link.page} passHref >
-              <a  className='nav-link'>{link.name}</a>
+              <a>{link.name}</a>
             </Link>
           </li>
         ))}
       </ul>
-    </div>
   )
 }
 
 const FooterSocial = () => {
   return (
-    <Box>
+    <Stack spacing={2}>
       <Typography>Siga-nos nas redes sociais</Typography>
       <Stack direction='row' alignItems='center' spacing={1}>
         <Box bgcolor='black' sx={iconStyle}>
           <InstagramIcon color='white'/>
         </Box>
-        <Typography>@selojafoisucata</Typography>
+        <Typography fontWeight={300} sx={{ color: '#fff' }}>@selojafoisucata</Typography>
       </Stack>
       <Stack direction='row' alignItems='center' spacing={1}>
         <Box bgcolor='black' sx={iconStyle}>
           <InstagramIcon color='white'/>
         </Box>
-        <Typography>@magnaniembalagens</Typography>
+        <Typography fontWeight={300} sx={{ color: '#fff' }}>@magnaniembalagens</Typography>
       </Stack>
-    </Box>
+    </Stack>
   )
 }
 
 export const Footer = () => {
   return (
     <footer>
-      <Box bgcolor='pink.main' sx={{ py: 4, width: '100%' }}>
+      <Box bgcolor='pink.main' sx={{ py: 10, width: '100%' }}>
         <Container>
-          <Stack direction={{ xs: 'column', md: 'row' }} justifyContent='space-between' alignItems='flex-start'>            
+          <Stack direction={{ xs: 'column', md: 'row' }} justifyContent='space-between' alignItems='flex-start' spacing={5}>            
             <FooterMain />
             <FooterSiteMap />
             <FooterSocial />

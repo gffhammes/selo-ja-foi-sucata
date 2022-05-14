@@ -8,7 +8,7 @@ import { useWindowSize } from '../../hooks/useWindowSize'
 const DesktopHero = () => {
   return (
     <Grid container justifyContent='center'>
-      <Grid item xs='auto' sx={{ pt: 8, width: 'fit-content' }}>        
+      <Grid item xs='auto' sx={{ pt: 8, width: 'fit-content',  zIndex: 500 }}>        
         <Typography variant='h1' fontSize={24}>Um selo sobre transformação:</Typography>
         <Typography variant='h1' sx={{ mt: 2 }}>Encontrou a<br/>caixinha sorrindo?</Typography>
         <Link href='/sobre-nos' passHref>
@@ -18,7 +18,7 @@ const DesktopHero = () => {
         </Link>
       </Grid>
       <Grid item xs>        
-        <Box sx={{ position: 'relative', width: '100%', height: '30rem', zIndex: 500 }}>
+        <Box sx={{ position: 'relative', width: '100%', height: '40vw', minHeight: '10rem', maxHeight: '30rem', zIndex: 500 }}>
           <Image
             src='/images/selo-ja-foi-sucata-caixas-home.png'
             alt='Caixas Selo Já Foi Sucata'
@@ -35,10 +35,10 @@ const DesktopHero = () => {
 
 const MobileHero = () => {
   return (
-    <Stack direction={{ xs: 'column', md: 'row' }} alignItems='flex-start' spacing={1} justifyContent='space-between'>
-        <Typography variant='h1' fontSize={16}>Um selo sobre transformação:</Typography>
-        <Typography variant='h1' fontSize={32} sx={{ mt: 2 }}>Encontrou a<br/>caixinha sorrindo?</Typography>
-      <Box sx={{ position: 'relative', width: '100%', height: { xs: '20rem', md: '38rem' }, zIndex: 500 }}>
+    <Stack direction='column' alignItems='flex-start' spacing={1} justifyContent='space-between'>
+      <Typography variant='h1' fontSize={16}>Um selo sobre transformação:</Typography>
+      <Typography variant='h1' fontSize={32} sx={{ mt: 2 }}>Encontrou a<br/>caixinha sorrindo?</Typography>
+      <Box sx={{ position: 'relative', width: '100%', height: '20rem', zIndex: 500, mt: '1.5rem!important' }}>
         <Image
           src='/images/selo-ja-foi-sucata-caixas-home.png'
           alt='Caixas Selo Já Foi Sucata'
@@ -47,11 +47,11 @@ const MobileHero = () => {
           objectPosition='right'
         />
       </Box>
-        <Link href='/sobre-nos' passHref>
-          <a style={{ width: '100%' }}>
-            <Button color='red' variant='contained' sx={{ ...defaultButtonStyle, mt: 3, width: '100%', zIndex: 500 }}>Saiba o que significa!</Button>
-          </a>
-        </Link>
+      <Link href='/sobre-nos' passHref>
+        <a style={{ width: '100%' }}>
+          <Button color='red' variant='contained' sx={{ ...defaultButtonStyle, mt: 3, width: '100%', zIndex: 500 }}>Saiba o que significa!</Button>
+        </a>
+      </Link>
     </Stack>
   )
 }
@@ -61,7 +61,7 @@ export const HeroSection = () => {
 
   return (
     <Box sx={{
-      minHeight: '80vh',
+      minHeight: { xs: '80vh', md: '90vh' },
       width: '100%',
       backgroundColor: '#22EFE7',
       display: 'flex',
@@ -73,7 +73,7 @@ export const HeroSection = () => {
       <Container>
         {width > 675 ? <DesktopHero /> : <MobileHero />} 
       </Container>
-      <Box sx={{ position: 'absolute', borderRight: '100vw solid #22EFE7', borderBottom: '20vh solid white', bottom: 0 }}></Box>
+      <Box sx={{ position: 'absolute', borderRight: '100vw solid #22EFE7', borderBottom: '15vw solid white', bottom: 0 }}></Box>
     </Box>
   )
 }
