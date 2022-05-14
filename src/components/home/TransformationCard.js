@@ -26,7 +26,7 @@ const MobileCard = () => {
           </Stack>
           <Stack alignItems='center' justifyContent='flex-start'>
             <Typography variant='h6'><strong>Se tornaram</strong></Typography>
-            <Arrow />
+            <Arrow width={200} />
           </Stack>
           <Stack alignItems='center'>
             <Typography variant='h3' fontSize={48} fontWeight={500}>+750.000</Typography>
@@ -60,7 +60,7 @@ const DesktopCard = () => {
           <Stack alignItems='center' justifyContent='flex-start' sx={{ mt: '-52px !important' }}>
             <Typography sx={{ textDecoration: 'underline', mb: 2 }}>Em 2021</Typography>
             <Typography variant='h6'><strong>Se tornaram</strong></Typography>
-            <Arrow />
+            <Arrow width={150} />
           </Stack>
           <Stack alignItems='center'>
             <Typography variant='h3' fontSize={58} fontWeight={500}>+750.000</Typography>

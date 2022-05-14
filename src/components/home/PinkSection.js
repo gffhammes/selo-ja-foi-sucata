@@ -5,7 +5,7 @@ const LeftText = () => {
   return (
     <Box sx={{ width: { xs: '100%', md: '40%' } }}>
       <Typography variant='h4' fontWeight={600} gutterBottom>Portanto, se você ver a caixinha sorrindo...</Typography>
-      <Typography sx={{ width: '34ch' }}>Saiba que você está recebendo uma embalagem reciclada e 100% reciclável, que #jáfoisucata!</Typography>
+      <Typography>Saiba que você está recebendo uma embalagem reciclada e 100% reciclável, que #jáfoisucata!</Typography>
     </Box>
   )
 }
@@ -41,6 +41,9 @@ export const PinkSection = () => {
           justifyContent='space-between'
           alignItems={{ xs: 'flex-start', md: 'center' }}
           spacing={4}
+          sx={{
+            pt: { xs: 10, md: 'unset' }
+          }}
         >          
           <LeftText />
           <Stickers />
