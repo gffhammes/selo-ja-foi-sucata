@@ -4,6 +4,7 @@ import React from 'react'
 import Package from '../../../public/vectors/package.svg'
 import GreenCircle from '../../../public/vectors/green-circle.svg'
 import BlueSpike from '../../../public/vectors/blue-spike.svg'
+import Link from 'next/link'
 
 const Text = () => {
   return (
@@ -24,10 +25,14 @@ const Text = () => {
           <br/><br/>
           Por isso, se você encontrou a caixinha sorrindo, saiba que você está comprando ou recebendo uma embalagem de papelão reciclado e 100% reciclável, que #JáFoiSucata!
         </Typography>
-        <Stack direction='row' alignItems='center' spacing={1} sx={{ pt: 2 }}>
-          <Package />
-          <Typography sx={{ color: 'rgb(236, 25, 6)' }}>Conheça nosso processo</Typography>
-        </Stack>
+        <Link href='/processo' passHref>
+          <a>  
+            <Stack direction='row' alignItems='center' spacing={1} sx={{ pt: 2 }}>                      
+              <Package />
+              <Typography sx={{ color: 'rgb(236, 25, 6)' }}>Conheça nosso processo</Typography>
+            </Stack>
+          </a>
+          </Link>
       </Stack>
     </Box>
   )

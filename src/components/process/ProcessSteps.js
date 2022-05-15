@@ -1,6 +1,7 @@
 import { Box, Container, Stack, Typography } from '@mui/material'
 import React from 'react'
 import Image from 'next/image'
+import { defaultPaddingTop } from '../../constants/pagesStyle'
 
 const steps = [
   {
@@ -49,50 +50,62 @@ const steps = [
   },
 ]
 
+const iconStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  height: '10rem',
+  position: 'relative',
+}
+
+const ProcessStep = ({ step, index }) => {
+  return (
+    <Stack direction={{ xs: 'column', md: 'row' }} alignItems='center' spacing={4}>
+      <Box sx={iconStyle}>
+        <Box sx={{ height: '4rem', width: '4rem', position: 'absolute', zIndex: 10 }}>
+          <Image src={`/images/${step.icon}`} alt={step.title} layout='fill' objectFit='contain' />
+        </Box>
+        <Box sx={{ height: '10rem', width: '10rem', position: 'relative', zIndex: 9 }}>
+          <Image src={`/images/${step.iconBackground}`} alt='background' layout='fill' objectFit='contain' />
+        </Box>
+      </Box> 
+      <Box>
+        <Typography fontSize={24}>{`${index + 1}. ${step.title}`}</Typography>
+        <Typography>{step.description}</Typography>
+      </Box>
+      <Box sx={{ width: '100%' }}>
+        <Stack direction='row' spacing={2} sx={{ width: '100%' }}>
+          {step.images.map((image, index) => (
+            <Box key={index} sx={{ position: 'relative', height: '10rem', width: { xs: '100%', md: '10rem' } }}>
+              <Image
+                src={`/images/${image}`}
+                layout='fill'
+                alt=''
+                objectFit='cover'
+                style={{ borderRadius: '1rem' }}
+              />
+            </Box>
+          ))}
+        </Stack>
+      </Box>
+    </Stack>
+  )
+}
+
 export const ProcessSteps = () => {
   return (
-    <Container sx={{ position: 'relative', pt: 20 }}>
+    <Container sx={{ position: 'relative', py: defaultPaddingTop }}>
       <Typography variant='h1' textAlign='center' sx={{ textDecoration: 'underline' }}>Processo</Typography>
       <Typography fontSize={24} textAlign='center' sx={{ maxWidth: '55ch', m: 'auto', mt: 3 }}>
         Bora conhecer mais do processo que, através de uma economia circular, dá uma nova chance ao que seria considerado “lixo”?
       </Typography>
       <Stack spacing={8} sx={{ mt: 8 }}>
         {steps.map((step, index) => (
-          <Box key={index}>
-            <Stack direction={{ xs: 'column', md: 'row' }} alignItems='center' spacing={4}>
-              <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '10rem', position: 'relative' }}>          
-                <Box sx={{ height: '4rem', width: '4rem', position: 'absolute', zIndex: 10 }}>
-                  <Image src={`/images/${step.icon}`} alt={step.title} layout='fill' objectFit='contain' />
-                </Box>
-                <Box sx={{ height: '10rem', width: '10rem', position: 'relative', zIndex: 9 }}>
-                  <Image src={`/images/${step.iconBackground}`} alt='background' layout='fill' objectFit='contain' />
-                </Box>
-              </Box> 
-              <Box>
-                <Typography fontSize={24}>{`${index + 1}. ${step.title}`}</Typography>
-                <Typography>{step.description}</Typography>
-              </Box>
-              <Box sx={{ width: '100%' }}>
-                <Stack direction='row' spacing={2} sx={{ width: '100%' }}>
-                  {step.images.map((image, index) => (
-                    <Box key={index} sx={{ position: 'relative', height: '10rem', width: { xs: '100%', md: '10rem' } }}>
-                      <Image
-                        src={`/images/${image}`}
-                        layout='fill'
-                        alt=''
-                        objectFit='cover'
-                        style={{ borderRadius: '1rem' }}
-                      />
-                    </Box>
-                  ))}
-                </Stack>
-              </Box>
-            </Stack>
-          </Box>
+          <ProcessStep step={step} key={index} index={index} />
         ))}
       </Stack>
       <Typography fontSize={24} textAlign='center' sx={{ m: 'auto', mt: 12 }}>
-        E é dessa forma que, o que teria ali<br/>o seu ciclo encerrado, ganha uma nova<br/>chance e se transforma em uma caixa<br/>linda e resistente.
+        E é dessa forma que, o que teria ali o seu ciclo encerrado, ganha uma nova chance e se transforma em uma caixa linda e resistente.
       </Typography>
     </Container>
   )

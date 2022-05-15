@@ -39,7 +39,7 @@ const MobileHero = () => {
     <Stack direction='column' alignItems='flex-start' spacing={1} justifyContent='space-between'>
       <Typography variant='h1' fontSize={16}>Um selo sobre transformação:</Typography>
       <Typography variant='h1' fontSize={32} sx={{ mt: 2 }}>Encontrou a<br/>caixinha sorrindo?</Typography>
-      <Box sx={{ position: 'relative', width: '100%', height: '20rem', zIndex: 500, mt: '1.5rem!important' }}>
+      <Box sx={{ position: 'relative', width: '100%', height: '18rem', zIndex: 500, mt: '1.5rem!important' }}>
         <Image
           src='/images/selo-ja-foi-sucata-caixas-home.png'
           alt='Caixas Selo Já Foi Sucata'

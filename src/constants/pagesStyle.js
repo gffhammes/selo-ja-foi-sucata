@@ -1,1 +1,1 @@
-export const defaultPaddingTop = { xs: 12, md: 20 };
+export const defaultPaddingTop = { xs: 15, md: 25 };
