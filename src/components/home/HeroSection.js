@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { defaultButtonStyle } from '../../constants/buttonStyle'
 import Image from 'next/image'
 import { useWindowSize } from '../../hooks/useWindowSize'
+import { defaultPaddingTop } from '../../constants/pagesStyle'
 
 const DesktopHero = () => {
   return (
@@ -68,7 +69,7 @@ export const HeroSection = () => {
       alignItems: 'center',
       justifyContent: 'center',
       position: 'relative',
-      pt: { xs: 12, md: 20},
+      pt: defaultPaddingTop,
     }}>
       <Container>
         {width > 675 ? <DesktopHero /> : <MobileHero />} 

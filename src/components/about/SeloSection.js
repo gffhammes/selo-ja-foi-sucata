@@ -7,8 +7,8 @@ import BlueSpike from '../../../public/vectors/blue-spike.svg'
 
 const Text = () => {
   return (
-    <Box flex='45ch'>
-      <Stack spacing={4} sx={{ maxWidth: '45ch' }}>
+    <Box sx={{ flexBasis: { xs: 'unset', md: '45ch' }, flexGrow: { xs: 1, md: 0 } }}>
+      <Stack spacing={4} sx={{ /*maxWidth: '45ch' */ }}>
         <Box sx={{ position: 'relative', height: '5rem', width: '15rem' }} >
           <Image
             src='/images/selo-ja-foi-sucata-rosa.png'
@@ -24,10 +24,10 @@ const Text = () => {
           <br/><br/>
           Por isso, se você encontrou a caixinha sorrindo, saiba que você está comprando ou recebendo uma embalagem de papelão reciclado e 100% reciclável, que #JáFoiSucata!
         </Typography>
-        <Box sx={{ display: 'flex', gap: '.5rem', pt: 2 }}>
+        <Stack direction='row' alignItems='center' spacing={1} sx={{ pt: 2 }}>
           <Package />
           <Typography sx={{ color: 'rgb(236, 25, 6)' }}>Conheça nosso processo</Typography>
-        </Box>
+        </Stack>
       </Stack>
     </Box>
   )
@@ -35,16 +35,16 @@ const Text = () => {
 
 const ImageAndElements = () => {
   return (
-    <Box sx={{ flex: '10rem' }}>
-      <Box sx={{ position: 'relative', height: '100%' }} >
+    <Box sx={{ flex: 'max-content' }}>
+      <Box sx={{ position: 'relative', height: { xs: '26rem', md: '40rem'}, width: '100%', borderRadius: '1rem' }} >
         {/* <BlueSpike style={{ zIndex: 10, position: 'absolute', transform: 'translate(-50%, 10%)' }} /> */}
         <Image
           src='/images/IMG_1112.png'
           alt='Selo Já Foi Sucata'
           layout='fill'
-          objectFit='contain'
+          objectFit='cover'
           objectPosition='right'
-          style={{ zIndex: 5 }}
+          style={{ zIndex: 5, borderRadius: '1rem' }}
         />
         {/* <GreenCircle style={{ zIndex: 1, position: 'absolute', bottom: 0, right: 0, transform: 'translate(45%, 30%)' }} /> */}
       </Box>
@@ -54,8 +54,8 @@ const ImageAndElements = () => {
 
 export const SeloSection = () => {
   return (
-    <Container>
-      <Stack direction={{ xs: 'column', md: 'row' }} justifyContent='space-between'>
+    <Container sx={{ py: 10 }}>
+      <Stack direction={{ xs: 'column', md: 'row' }} justifyContent='space-between' alignItems={{  md: 'center' }} spacing={5}>
         <Text />
         <ImageAndElements />
       </Stack>

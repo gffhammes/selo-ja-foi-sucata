@@ -1,0 +1,1 @@
+export const defaultPaddingTop = { xs: 12, md: 20 };
