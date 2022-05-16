@@ -85,7 +85,7 @@ export const BottomSection = () => {
           backgroundPosition: 'top',
           backgroundRepeat: 'no-repeat',
           backgroundSize: '100%',
-          backgroundImage: 'url("images/green-wave-reverse.png")',
+          backgroundImage: 'url("/vectors/green-wave.svg")',
           zIndex: 0,          
         },
       }}

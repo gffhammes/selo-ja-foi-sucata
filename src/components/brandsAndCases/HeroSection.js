@@ -28,7 +28,7 @@ export const HeroSection = () => {
           backgroundPosition: 'bottom',
           backgroundRepeat: 'no-repeat',
           backgroundSize: '100%',
-          backgroundImage: 'url("images/blue-wave.png")',
+          backgroundImage: 'url("/vectors/blue-wave.svg")',
           zIndex: 0,          
         },
       }}
