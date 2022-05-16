@@ -77,7 +77,7 @@ export const Navbar = () => {
                 height: '100vh',
                 top: 0,
                 right: 0,
-                backgroundColor: 'pink.main',
+                backgroundColor: navbarColor,
                 transition: '300ms ease-out',
                 transform: menuOpen ? 'translateX(0)' : 'translateX(100%)',
                 boxShadow: menuOpen ? 22 : 0,
