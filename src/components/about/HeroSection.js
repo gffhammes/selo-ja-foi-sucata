@@ -28,7 +28,7 @@ const HeroVideo = () => {
           loading="lazy"
           width="100%"
           height={width > 960 ? "100%" : "250"}
-          style={{ borderRadius: '1rem', border: '1px solid rgba(0, 0, 0, 0.185)', position: 'absolute' }}
+          style={{ borderRadius: '1rem', border: '1px solid rgba(0, 0, 0, 0.185)', position: { xs: 'relative', md: 'absolute' } }}
           src="https://www.youtube.com/embed/48KNB0oh9UA?controls=0"
           title="Mag Embalagens"
           frameBorder="0"
@@ -36,7 +36,7 @@ const HeroVideo = () => {
           allowFullScreen
           onLoad={() => setLoading(false)}
         />
-        {loading && <Skeleton variant="rectangular" width='100%' height='100%' sx={{ position: 'absolute', borderRadius: '1rem' }} />}
+        {loading && <Skeleton variant="rectangular" width='100%' height='100%' sx={{ position: 'absolute', borderRadius: '1rem', top: 0 }} />}
     </Box>
   )
 }
