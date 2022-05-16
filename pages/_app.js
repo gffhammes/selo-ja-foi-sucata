@@ -2,7 +2,18 @@ import { createTheme, ThemeProvider } from '@mui/material'
 import { Footer } from '../src/components/commons/Footer';
 import { Navbar } from '../src/components/commons/Navbar'
 import { PageHeadTitle } from '../src/components/commons/PageHeadTitle'
+import NProgress from "nprogress"
+import Router from "next/router"
 import '../styles/globals.scss'
+
+Router.onRouteChangeStart = url => {
+  NProgress.start()
+}
+
+Router.onRouteChangeComplete = () => NProgress.done()
+
+Router.onRouteChangeError = () => NProgress.done()
+
 
 const { palette } = createTheme();
 
