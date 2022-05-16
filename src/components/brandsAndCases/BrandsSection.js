@@ -9,29 +9,29 @@ const brands = [
     category: 'Marketplace',
   },
   {
-    image: 'elo7-logo.png',
-    name: 'Elo7',
+    image: 'belong-be-logo.webp',
+    name: 'belong be',
     category: 'Marketplace',
   },
   {
-    image: 'elo7-logo.png',
-    name: 'Elo7',
-    category: 'Marketplace',
+    image: 'magnolia-logo.png',
+    name: 'Magnólia',
+    category: 'Papelaria',
   },
   {
-    image: 'elo7-logo.png',
-    name: 'Elo7',
-    category: 'Marketplace',
+    image: 'caderno-inteligente-logo.png',
+    name: 'Caderno Inteligente',
+    category: 'E-commerce',
   },
   {
-    image: 'elo7-logo.png',
-    name: 'Elo7',
-    category: 'Marketplace',
+    image: 'rio-logo.webp',
+    name: 'Riô',
+    category: 'Cosméticos & Bem-estar',
   },
   {
-    image: 'elo7-logo.png',
-    name: 'Elo7',
-    category: 'Marketplace',
+    image: 'o-frances-logo.png',
+    name: 'O Francês',
+    category: 'Moda e vestuário',
   },
 ]
 
