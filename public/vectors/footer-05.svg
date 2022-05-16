@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="456" height="168" viewBox="0 0 456 168">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_97" data-name="Rectangle 97" width="456" height="168" transform="translate(184 1671)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_7" data-name="Mask Group 7" transform="translate(-184 -1671)" clip-path="url(#clip-path)">
+    <g id="Group_325" data-name="Group 325">
+      <path id="Path_1190" data-name="Path 1190" d="M-89.665,2645.327l-24.731-11.742v-33.354h-10.756v28.247l-9.422-4.474-40.662,18.17v40.685h-5.425v-40.467l-14.406-6.835v-35.327h-10.756v30.223L-219.415,2624l-40.36,18.039v40.817H-265.2v-40.579l-15.916-7.556v-34.494h-10.756v29.388L-303.7,2624l-37.46,16.743v42.113h-5.424l-4.823-62.963h-30.482v-.523h9.334v-9.6h-9.334v-8.1h2.524v-9.9H-391.59v-6.343h-3.864v-39.148h-7.714v39.148h-11.57v-51.492h-7.714v51.492h-6.629v6.343h-9.77v9.9h.068v66.627l-40.733,14.553v31.291h97.628l300.365-6.786-8.142-14.932Z" transform="translate(663.25 -863.177)" fill="#ff39e3"/>
+      <g id="Group_207" data-name="Group 207" transform="translate(597.884 1810.781)">
+        <g id="Group_208" data-name="Group 208" transform="translate(0 0)">
+          <path id="Path_1191" data-name="Path 1191" d="M-998.307,1476.408a8,8,0,0,1-8.233,7.727,7.989,7.989,0,0,1-8.229-7.727,7.985,7.985,0,0,1,8.229-7.734A8,8,0,0,1-998.307,1476.408Z" transform="translate(1040.006 -1459.765)" fill="#ff39e3"/>
+          <rect id="Rectangle_56" data-name="Rectangle 56" width="1.895" height="14.282" transform="translate(32.518 19.756)" fill="#ff39e3"/>
+          <g id="Group_206" data-name="Group 206">
+            <path id="Path_1192" data-name="Path 1192" d="M-1015.28,1526.984c0,5.774-5,10.465-11.152,10.465s-11.152-4.691-11.152-10.465c0-5.8,4.986-10.476,11.152-10.476S-1015.28,1521.189-1015.28,1526.984Z" transform="translate(1037.585 -1516.508)" fill="#ff39e3"/>
+            <rect id="Rectangle_57" data-name="Rectangle 57" width="2.563" height="19.344" transform="translate(9.871 14.694)" fill="#ff39e3"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

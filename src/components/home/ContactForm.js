@@ -37,7 +37,7 @@ export const ContactForm = () => {
   return (
     <Box bgcolor='green.main' sx={{ py: { xs: 10, md: 15 }, zIndex: 5, position: 'relative' }}>
       <Container>        
-        <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 5, md: 15 }} alignItems={{ xs: 'flex-start', sm: 'center', md: 'flex-start' }}>
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 5, md: 15 }} alignItems={{ xs: 'flex-start', sm: 'center' }}>
           <Box sx={{ width: 'fit-content' }}>
             <Stack direction={{ xs: 'column', sm: 'row', md: 'column' }} justifyContent='space-between' alignItems={{ xs: 'flex-start', sm: 'center', md: 'flex-start' }} spacing={4}>              
               <Typography variant='h2' fontSize={42} sx={{ whiteSpace: { xs: 'normal', md: 'nowrap' } }} >Quer fazer parte<br/>de um mundo mais<br/>sustentável?</Typography>
