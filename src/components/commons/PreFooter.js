@@ -94,7 +94,7 @@ const AboutPreFooter = () => {
 
 const ProcessPreFooter = () => {
   return (
-    <Stack direction='row' alignItems='flex-end' justifyContent='space-between' sx={{ width: '100%' }}>
+    <Stack direction='row' alignItems='flex-end' justifyContent='space-between' sx={{ width: '100%' }} spacing={4}>
       <Box sx={footer05Style}>
         <Footer05 width='100%' height='100%' preserveAspectRatio="xMinYMax"/>
       </Box>
