@@ -1,7 +1,8 @@
 import { Container, Stack, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
-import Arrow from '../../../public/vectors/arrow.svg'
+import RightArrow from '../../../public/vectors/right-arrow.svg'
+import DownArrow from '../../../public/vectors/down-arrow.svg'
 import { useWindowSize } from '../../hooks/useWindowSize'
 
 const MobileCard = () => {
@@ -26,7 +27,7 @@ const MobileCard = () => {
           </Stack>
           <Stack alignItems='center' justifyContent='flex-start'>
             <Typography variant='h6'><strong>Se tornaram</strong></Typography>
-            <Arrow width={200} />
+            <DownArrow height={150} />
           </Stack>
           <Stack alignItems='center'>
             <Typography variant='h3' fontSize={48} fontWeight={500}>+750.000</Typography>
