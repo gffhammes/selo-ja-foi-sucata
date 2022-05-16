@@ -66,80 +66,69 @@ const footer08Style = {
   width: '100%'
 }
 
-const HomePreFooter = () => {
+export const HomePreFooter = () => {
   return (
-    <Stack direction='row' alignItems='flex-end' justifyContent='space-between' sx={{ width: '100%' }}>
-      <Box sx={footer01Style}>
-        <Footer01 width='100%' height='100%' preserveAspectRatio="xMinYMax"/>
-      </Box>
-      <Box sx={footer02Style}>
-        <Footer02 width='100%' height='100%' preserveAspectRatio="xMaxYMax"/>
-      </Box>
-    </Stack>
-  )
-}
-
-const AboutPreFooter = () => {
-  return (
-    <Stack direction='row' alignItems='flex-end' justifyContent='space-between' sx={{ width: '100%' }}>
-      <Box sx={footer03Style}>
-        <Footer03 width='100%' height='100%' preserveAspectRatio="xMinYMax"/>
-      </Box>
-      <Box sx={footer04Style}>
-        <Footer04 width='100%' height='100%' preserveAspectRatio="xMaxYMax"/>
-      </Box>
-    </Stack>
-  )
-}
-
-const ProcessPreFooter = () => {
-  return (
-    <Stack direction='row' alignItems='flex-end' justifyContent='space-between' sx={{ width: '100%' }} spacing={4}>
-      <Box sx={footer05Style}>
-        <Footer05 width='100%' height='100%' preserveAspectRatio="xMinYMax"/>
-      </Box>
-      <Box sx={footer06Style}>
-        <Footer06 width='100%' height='100%' preserveAspectRatio="xMaxYMax"/>
-      </Box>
-    </Stack>
-  )
-}
-
-const BrandsAndCasesPreFooter = () => {
-  return (
-    <Stack direction='row' alignItems='flex-end' justifyContent='space-between' sx={{ width: '100%' }}>
-      <Box sx={footer07Style}>
-        <Footer07 width='100%' height='100%' preserveAspectRatio="xMinYMax"/>
-      </Box>
-      <Box sx={footer08Style}>
-        <Footer08 width='100%' height='100%' preserveAspectRatio="xMaxYMax"/>
-      </Box>
-    </Stack>
-  )
-}
-
-export const PreFooter = () => {
-  const { page, preFooterColor } = useRouteData();
-
-  const getPreFooterComponent = useMemo(() => {
-    switch (page) {
-      case '/':
-        return <HomePreFooter />
-      case '/sobre-nos':
-        return <AboutPreFooter />
-      case '/processo':
-        return <ProcessPreFooter />
-      case '/marcas-e-cases':
-        return <BrandsAndCasesPreFooter />
-      default:
-        return null;
-    }
-  }, [page])
-
-  return (
-    <Box bgcolor={preFooterColor} sx={{ height: 'fit-content' }}>
+    <Box bgcolor='green.main' sx={{ height: 'fit-content' }}>
       <Container>
-        {getPreFooterComponent}
+        <Stack direction='row' alignItems='flex-end' justifyContent='space-between' sx={{ width: '100%' }}>
+          <Box sx={footer01Style}>
+            <Footer01 width='100%' height='100%' preserveAspectRatio="xMinYMax"/>
+          </Box>
+          <Box sx={footer02Style}>
+            <Footer02 width='100%' height='100%' preserveAspectRatio="xMaxYMax"/>
+          </Box>
+        </Stack>
+      </Container>
+    </Box>
+  )
+}
+
+export const AboutPreFooter = () => {
+  return (
+    <Box sx={{ height: 'fit-content' }}>
+      <Container>
+        <Stack direction='row' alignItems='flex-end' justifyContent='space-between' sx={{ width: '100%' }}>
+          <Box sx={footer03Style}>
+            <Footer03 width='100%' height='100%' preserveAspectRatio="xMinYMax"/>
+          </Box>
+          <Box sx={footer04Style}>
+            <Footer04 width='100%' height='100%' preserveAspectRatio="xMaxYMax"/>
+          </Box>
+        </Stack>
+      </Container>
+    </Box>
+  )
+}
+
+export const ProcessPreFooter = () => {
+  return (
+    <Box sx={{ height: 'fit-content' }}>
+      <Container>
+        <Stack direction='row' alignItems='flex-end' justifyContent='space-between' sx={{ width: '100%' }} spacing={4}>
+          <Box sx={footer05Style}>
+            <Footer05 width='100%' height='100%' preserveAspectRatio="xMinYMax"/>
+          </Box>
+          <Box sx={footer06Style}>
+            <Footer06 width='100%' height='100%' preserveAspectRatio="xMaxYMax"/>
+          </Box>
+        </Stack>
+      </Container>
+    </Box>
+  )
+}
+
+export const BrandsAndCasesPreFooter = () => {
+  return (
+    <Box bgcolor='green.main' sx={{ height: 'fit-content' }}>
+      <Container>
+        <Stack direction='row' alignItems='flex-end' justifyContent='space-between' sx={{ width: '100%' }}>
+          <Box sx={footer07Style}>
+            <Footer07 width='100%' height='100%' preserveAspectRatio="xMinYMax"/>
+          </Box>
+          <Box sx={footer08Style}>
+            <Footer08 width='100%' height='100%' preserveAspectRatio="xMaxYMax"/>
+          </Box>
+        </Stack>
       </Container>
     </Box>
   )

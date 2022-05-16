@@ -13,12 +13,12 @@ const brands = [
     logo: 'logo-frigorifico-verdi.png',
   },
   {
-    name: 'Neilar',
-    logo: 'logo-neilar.png',
+    name: 'Cravil',
+    logo: 'cravil-logo.png',
   },
   {
-    name: 'Frigorífico Verdi',
-    logo: 'logo-frigorifico-verdi.png',
+    name: 'Royal Ciclo',
+    logo: 'royalciclo-logo.png',
   },
 ]
 

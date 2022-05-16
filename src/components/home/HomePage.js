@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
+import { HomePreFooter } from '../commons/PreFooter'
 import { BrandsSection } from './BrandsSection'
 import { ContactForm } from './ContactForm'
 import { Gallery } from './Gallery'
@@ -28,6 +29,7 @@ export const HomePage = () => {
       <BrandsSection />
       <Gallery />
       <ContactForm />
+      <HomePreFooter />
     </Box>
   )
 }

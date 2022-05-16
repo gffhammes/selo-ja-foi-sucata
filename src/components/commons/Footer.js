@@ -1,12 +1,11 @@
 import { Box, Container, Stack, Typography } from '@mui/material'
-import React from 'react'
+import React, { useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { links } from '../../constants/pages'
 import LogoSelo from '../../../public/vectors/logo-selo-ja-foi-sucata.svg'
 import LogoMag from '../../../public/vectors/logo-mag.svg'
-import { PreFooter } from './PreFooter';
 
 const iconStyle = {
   p: 1,
@@ -83,7 +82,6 @@ const FooterSocial = () => {
 export const Footer = () => {
   return (
     <footer>
-      <PreFooter />
       <Box bgcolor='pink.main' sx={{ py: 10, width: '100%' }}>
         <Container>
           <Stack direction={{ xs: 'column', md: 'row' }} justifyContent='space-between' alignItems='flex-start' spacing={5}>            

@@ -1,5 +1,5 @@
-import { Box, Container, Stack, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Container, Skeleton, Stack, Typography } from '@mui/material'
+import React, { useState } from 'react'
 import { defaultPaddingTop } from '../../constants/pagesStyle'
 import { useWindowSize } from '../../hooks/useWindowSize'
 
@@ -19,20 +19,24 @@ const HeroText = () => {
 }
 
 const HeroVideo = () => {
+  const [loading, setLoading] = useState(true);
   const { width } = useWindowSize();
 
   return (
-    <Box sx={{ flex: 1, height: { xs: '10rem', md: 'unset' }, borderRadius: '1rem' }}>
-      <iframe
-        width="100%"
-        height={width > 960 ? "100%" : "250"}
-        style={{ borderRadius: '1rem', border: '1px solid rgba(0, 0, 0, 0.185)' }}
-        src="https://www.youtube.com/embed/48KNB0oh9UA?controls=0"
-        title="Mag Embalagens"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
+    <Box sx={{ flex: 1, height: { xs: '10rem', md: 'unset' }, borderRadius: '1rem', position: 'relative' }}>      
+        {loading && <Skeleton variant="rectangular" width='100%' height='100%' sx={{ position: 'absolute', borderRadius: '1rem' }} />}
+        <iframe
+          loading="lazy"
+          width="100%"
+          height={width > 960 ? "100%" : "250"}
+          style={{ borderRadius: '1rem', border: '1px solid rgba(0, 0, 0, 0.185)', visibility: loading ? 'hidden' : 'visible' }}
+          src="https://www.youtube.com/embed/48KNB0oh9UA?controls=0"
+          title="Mag Embalagens"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          onLoad={() => setLoading(false)}
+        />
     </Box>
   )
 }
