@@ -42,7 +42,9 @@ const ImageAndElements = () => {
   return (
     <Box sx={{ flex: 'max-content' }}>
       <Box sx={{ position: 'relative', height: { xs: '26rem', md: '40rem'}, width: '100%', borderRadius: '1rem' }} >
-        {/* <BlueSpike style={{ zIndex: 10, position: 'absolute', transform: 'translate(-50%, 10%)' }} /> */}
+        <Box sx={{ zIndex: 10, position: 'absolute', transform: { xs: 'translate(-20%, -20%)', md: 'translate(-50%, 10%)' }, height: '10rem' }} >
+          <BlueSpike height='100%' width='100%' />
+        </Box>
         <Image
           src='/images/IMG_1112.png'
           alt='Selo Já Foi Sucata'
@@ -51,7 +53,9 @@ const ImageAndElements = () => {
           objectPosition='right'
           style={{ zIndex: 5, borderRadius: '1rem' }}
         />
-        {/* <GreenCircle style={{ zIndex: 1, position: 'absolute', bottom: 0, right: 0, transform: 'translate(45%, 30%)' }} /> */}
+        <Box sx={{ zIndex: 1, position: 'absolute', bottom: 0, right: 0, transform: 'translate(25%, 20%)', height: '7rem' }} >
+          <GreenCircle height='100%' width='100%' />
+        </Box>
       </Box>
     </Box>
   )

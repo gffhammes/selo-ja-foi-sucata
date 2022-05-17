@@ -2,11 +2,12 @@ import { Box, Container, Skeleton, Stack, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { defaultPaddingTop } from '../../constants/pagesStyle'
 import { useWindowSize } from '../../hooks/useWindowSize'
+import RedSpike from '../../../public/vectors/red-spike.svg'
 
 const HeroText = () => {
   return (
     <Stack spacing={3} sx={{ flex: 1 }}>
-      <Typography variant='h1' fontSize='2rem' fontWeight={500}>Como surgiu o selo?</Typography>
+      <Typography variant='h1' fontSize='2rem' fontWeight={500} >Como surgiu o selo?</Typography>
       <Typography sx={{width: 'min(52ch, 100%)' }}>
         O selo surgiu na Mag Embalagens como uma forma de reforçar o nosso compromisso com a sustentabilidade, e em paralelo, estimular ações e escolhas cada vez mais conscientes no universo dos e-commerces.
         <br/><br/>
@@ -23,12 +24,15 @@ const HeroVideo = () => {
   const { width } = useWindowSize();
 
   return (
-    <Box sx={{ flex: 1, height: { xs: '10rem', md: 'unset' }, borderRadius: '1rem', position: 'relative' }}>      
+    <Box sx={{ flex: 1, height: { xs: '10rem', md: 'unset' }, borderRadius: '1rem', position: 'relative' }}>
+        <Box sx={{ position: 'absolute', right: 0, width: '10rem', height: '10rem', transform: { xs: 'translate(32%, -41%)', lg: 'translate(45%, -45%)' }, zIndex: 5 }}>
+          <RedSpike height='100%' width='100%' />   
+        </Box>
         <iframe
           loading="lazy"
           width="100%"
           height={width > 960 ? "100%" : "250"}
-          style={{ borderRadius: '1rem', border: '1px solid rgba(0, 0, 0, 0.185)', position: { xs: 'relative', md: 'absolute' } }}
+          style={{ borderRadius: '1rem', border: '1px solid rgba(0, 0, 0, 0.185)', position: 'relative', zIndex: 10 }}
           src="https://www.youtube.com/embed/48KNB0oh9UA?controls=0"
           title="Mag Embalagens"
           frameBorder="0"
@@ -36,7 +40,7 @@ const HeroVideo = () => {
           allowFullScreen
           onLoad={() => setLoading(false)}
         />
-        {loading && <Skeleton variant="rectangular" width='100%' height='100%' sx={{ position: 'absolute', borderRadius: '1rem', top: 0 }} />}
+        {loading && <Skeleton animation="wave" variant="rectangular" width='100%' height='100%' sx={{ position: 'absolute', borderRadius: '1rem', top: 0 }} />}
     </Box>
   )
 }
@@ -44,7 +48,7 @@ const HeroVideo = () => {
 const HeroMobile = () => {
   return (
     <Stack spacing={3} sx={{ flex: 1 }}>
-      <Typography variant='h1' fontSize='2rem' fontWeight={500}>Como surgiu o selo?</Typography>
+      <Typography variant='h1' fontSize='2rem' fontWeight={500} sx={{ zIndex: 10, position: 'relative' }}>Como surgiu o selo?</Typography>
       <HeroVideo />
       <Typography sx={{width: '100%' }}>
         O selo surgiu na Mag Embalagens como uma forma de reforçar o nosso compromisso com a sustentabilidade, e em paralelo, estimular ações e escolhas cada vez mais conscientes no universo dos e-commerces.

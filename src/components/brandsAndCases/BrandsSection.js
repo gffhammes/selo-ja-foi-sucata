@@ -1,5 +1,6 @@
 import { Box, Container, Grid, Paper, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
+import PinkSticker from '../../../public/vectors/pink-sticker.svg'
 import React from 'react'
 
 const brands = [
@@ -62,7 +63,7 @@ const HeroBrands = () => {
 
 export const BrandsSection = () => {
   return (
-    <Container>        
+    <Container>    
       <Stack direction='column' spacing={10}>
         <Typography variant='h1' fontSize='2rem' fontWeight={500} textAlign='center' sx={{ maxWidth: '21ch', mx: 'auto' }}>Marcas que colaboram com um mundo melhor!</Typography>
         <HeroBrands />

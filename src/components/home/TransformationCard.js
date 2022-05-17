@@ -17,7 +17,8 @@ const Waste = () => {
   return (
     <Stack alignItems='center'>
       <Box sx={{ fontSize: 58, fontWeight: 500}}>
-        <CountUp start={140000} end={145000} {...countUpDefaultProps} />
+        <span>+145000</span>
+        {/* <CountUp start={140000} end={145000} {...countUpDefaultProps} /> */}
       </Box>            
       <Typography><strong>Quilos</strong> de sucata</Typography>
     </Stack>
@@ -37,7 +38,8 @@ const Boxes = () => {
   return (
     <Stack alignItems='center'>
       <Box sx={{ fontSize: 58, fontWeight: 500}}>
-        <CountUp start={700000} end={750000} {...countUpDefaultProps} />
+        <span>+750000</span>
+        {/* <CountUp start={700000} end={750000} {...countUpDefaultProps} /> */}
       </Box>
       <Typography>Novas caixas da <strong>Mag.</strong></Typography>
     </Stack>

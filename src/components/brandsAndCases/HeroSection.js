@@ -2,6 +2,7 @@ import { Box, Container, Grid, Paper, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 import { defaultPaddingTop } from '../../constants/pagesStyle'
+import PinkSticker from '../../../public/vectors/pink-sticker.svg'
 import { BrandsSection } from './BrandsSection'
 
 export const HeroSection = () => {
