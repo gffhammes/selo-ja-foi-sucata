@@ -29,7 +29,30 @@ const Text = () => {
           <a>  
             <Stack direction='row' alignItems='center' spacing={1} sx={{ pt: 2 }}>                      
               <Package />
-              <Typography sx={{ color: 'rgb(236, 25, 6)' }}>Conheça nosso processo</Typography>
+              <Typography
+                sx={{
+                  position: 'relative',
+                  overflow: 'hidden',
+                  color: 'rgb(236, 25, 6)',
+                  '&::before': {
+                    content: '""',
+                    display: 'block',
+                    position: 'absolute',
+                    borderBottom: '1px solid red',
+                    width: '100%',
+                    height: 'calc(100% - 1px)',
+                    transform: 'translate(-100%)',
+                    transition: '500ms ease',
+                  },
+                  '&:hover': {
+                    '&::before': {
+                      transform: 'translate(0)'
+                    }
+                  },
+                }}
+              >
+                Conheça nosso processo
+              </Typography>
             </Stack>
           </a>
           </Link>
