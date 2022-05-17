@@ -1,16 +1,19 @@
-import { Box, Button, Container, Grid, Stack, TextField, Typography } from "@mui/material"
+import { Alert, Box, Button, Container, Grid, Stack, TextField, Typography } from "@mui/material"
+import { LoadingButton } from '@mui/lab';
 import { Formik, Form } from "formik"
 import Image from 'next/image'
+import { useState } from "react"
 import { defaultButtonStyle } from "../../constants/buttonStyle"
 import { Input } from "../commons/form/Input"
 
 const textFieldStyle = { backgroundColor: 'white.main', borderRadius: '.5rem' }
 
 export const ContactForm = () => {
+  const [submitting, setSubmitting] = useState(false)
+  const [submittingStatus, setSubmittingStatus] = useState(null)
 
   const validate = (values) => {
     const errors = {};
-
     
     if (!values.firstName) {
       errors.firstName = 'Obrigatório';
@@ -29,8 +32,24 @@ export const ContactForm = () => {
     return errors;
   };
 
-  const handleSubmit = (values, { resetForm }) => {
-    console.log(values)
+  const handleSubmit = async (values, { resetForm }) => {
+    setSubmitting(true);
+    await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(values)
+    }).then((res) => {
+      setSubmitting(false);
+      setSubmittingStatus('success')
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+      }
+    }).catch((err) => {
+      setSubmittingStatus('error')
+    })
     resetForm();
   }
 
@@ -64,7 +83,9 @@ export const ContactForm = () => {
                   </Stack>
                   <Typography sx={{ mt: 3 }} gutterBottom>Seu melhor e-mail*</Typography>
                   <Input name='email' placeholder="O seu e-mail aqui" type='email' />
-                  <Button sx={{ ...defaultButtonStyle, mt: 3 }} fullWidth color='red' variant='contained' type='submit'>Enviar</Button>
+                  <LoadingButton loading={submitting} sx={{ ...defaultButtonStyle, mt: 3 }} fullWidth color='red' variant='contained' type='submit'>Enviar</LoadingButton>
+                  {submittingStatus === 'success' && <Alert severity="success" sx={{ mt: 3 }}>Seu contato foi cadastrado em nossa base!</Alert>}
+                  {submittingStatus === 'error' && <Alert severity="success" sx={{ mt: 3 }}>Algum erro ocorreu!</Alert>}
                 </Form>
               )}
             </Formik>
