@@ -29,9 +29,9 @@ const FooterMain = () => {
         <Typography fontWeight={300}>Iniciativa sustentável da empresa Magnani Embalagens</Typography>
       </Stack>
       <Stack sx={{ color: '#fff' }}>
-        <Typography fontWeight={300}>CNPJ: 00.000.000/0001-00</Typography>
-        <Typography fontWeight={300}>Fone: (47) 9 9999-9999</Typography>
-        <Typography fontWeight={300}>Rua João Silva, n° 123 - Rio do Sul</Typography>
+        <Typography fontWeight={300}>CNPJ: 31.565.101/0001-33</Typography>
+        <Typography fontWeight={300}>Fone: (47) 3521-5323</Typography>
+        <Typography fontWeight={300}>Rua dos Vereadores, 2847. Bairro Itoupava - Rio do Sul/SC, </Typography>
       </Stack>
     </Stack>
   )

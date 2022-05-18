@@ -1,6 +1,6 @@
-import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
+import { Box, Button, Container, Grid, Grow, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
-import React from 'react'
+import React, { useRef } from 'react'
 import { defaultButtonStyle } from '../../constants/buttonStyle'
 import { ProcessIconText } from './ProcessIconText'
 import Link from 'next/link'
@@ -33,7 +33,7 @@ export const ProcessSection = () => {
     <Container sx={{ mb: 10 }}>
       <Grid container spacing={8}>
         {processes.map((process, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>          
+          <Grid item xs={12} sm={6} md={3} key={index}>
             <ProcessIconText image={process.image} text={process.text} background={process.background} />
           </Grid>
         ))}

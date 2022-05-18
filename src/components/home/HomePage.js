@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HomePreFooter } from '../commons/PreFooter'
 import { BrandsSection } from './BrandsSection'
 import { ContactForm } from './ContactForm'
@@ -10,6 +10,7 @@ import { ProcessSection } from './ProcessSection'
 import { TransformationCard } from './TransformationCard'
 
 export const HomePage = () => {
+
   return (
     <Box sx={{ height: '100%' }}>  
       <HeroSection />
