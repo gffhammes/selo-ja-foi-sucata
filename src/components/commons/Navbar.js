@@ -61,6 +61,9 @@ export const Navbar = () => {
                     </Link>
                   </Box>
                 ))}
+                <Box component='li' sx={{ listStyle: 'none' }}>
+                  <a href='http://onelink.to/9e9cdq' target='_blank' className='nav-link' rel="noreferrer">Baixe o Cataki</a>
+                </Box>
               </ul>
             </div> :
 
@@ -85,14 +88,17 @@ export const Navbar = () => {
             >
                 
               <div style={{ paddingTop: '5rem' }} >
-                <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', padding: '1rem' }}>
+                <ul style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', padding: '1rem 2em' }}>
                   {links.map((link) => (
                     <li key={link.name} style={{ listStyle: 'none' }} onClick={handleMenuOpenToggle}>
                       <Link href={link.page} passHref>
-                        <a className='nav-link'>{link.name}</a>
+                        <a className='nav-link' style={{ backgroundColor: page === link.page ? 'white' : '' }}>{link.name}</a>
                       </Link>
                     </li>
                   ))}
+                  <Box component='li' sx={{ listStyle: 'none' }}>
+                    <a href='http://onelink.to/9e9cdq' target='_blank' className='nav-link' rel="noreferrer">Baixe o Cataki</a>
+                  </Box>
                 </ul>
               </div>
             </Box>
