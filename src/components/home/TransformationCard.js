@@ -1,10 +1,11 @@
 import { Container, Stack, Typography } from '@mui/material'
 import { Box } from '@mui/system'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import RightArrow from '../../../public/vectors/right-arrow.svg'
 import DownArrow from '../../../public/vectors/down-arrow.svg'
 import { useWindowSize } from '../../hooks/useWindowSize'
-import CountUp from 'react-countup';
+import CountUp, { useCountUp } from 'react-countup';
+import VisibilitySensor from "react-visibility-sensor";
 
 const countUpDefaultProps = {
   prefix: '+',
@@ -13,12 +14,34 @@ const countUpDefaultProps = {
   duration: 4,
 }
 
+const DefaultCountUp = ({ end }) => {
+  const [viewPortEntered, setViewPortEntered] = useState(false);
+
+  return (
+    <CountUp start={viewPortEntered ? null : 0} end={end} {...countUpDefaultProps} >
+      {({ countUpRef }) => (
+        <VisibilitySensor
+          active={!viewPortEntered}
+          onChange={isVisible => {
+            if (isVisible) {
+              setViewPortEntered(true);
+            }
+          }}
+          delayedCall
+        >
+          <span ref={countUpRef} />
+        </VisibilitySensor>
+      )}
+    </CountUp>
+  )
+}
+
 const Waste = () => {
+
   return (
     <Stack alignItems='center'>
       <Box sx={{ fontSize: 58, fontWeight: 500}}>
-        <span>+145000</span>
-        {/* <CountUp start={140000} end={145000} {...countUpDefaultProps} /> */}
+        <DefaultCountUp end={145000} />
       </Box>            
       <Typography><strong>Quilos</strong> de sucata</Typography>
     </Stack>
@@ -38,8 +61,7 @@ const Boxes = () => {
   return (
     <Stack alignItems='center'>
       <Box sx={{ fontSize: 58, fontWeight: 500}}>
-        <span>+750000</span>
-        {/* <CountUp start={700000} end={750000} {...countUpDefaultProps} /> */}
+        <DefaultCountUp end={750000} />
       </Box>
       <Typography>Novas caixas da <strong>Mag.</strong></Typography>
     </Stack>
