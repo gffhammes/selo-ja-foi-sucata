@@ -24,11 +24,12 @@ const DesktopHero = () => {
       <Grid item xs>        
         <Box sx={{ position: 'relative', width: '100%', height: '40vw', minHeight: '10rem', maxHeight: '30rem', zIndex: 500 }}>
           <Image
-            src='/images/selo-ja-foi-sucata-caixas-home.png'
+            src='/images/selo-ja-foi-sucata-caixas-home.webp'
             alt='Caixas Selo Já Foi Sucata'
             layout='fill'
             objectFit='contain'
             objectPosition='right'
+            priority={true}
           />
         </Box>
       </Grid>
