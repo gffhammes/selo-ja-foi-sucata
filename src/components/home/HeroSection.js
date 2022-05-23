@@ -6,12 +6,15 @@ import Image from 'next/image'
 import { useWindowSize } from '../../hooks/useWindowSize'
 import { defaultPaddingTop } from '../../constants/pagesStyle'
 
+const topText = 'Uma caixa feita de outras caixas:';
+const h1 = 'Encontrou a\ncaixinha sorrindo?';
+
 const DesktopHero = () => {
   return (
     <Grid container justifyContent='center'>
       <Grid item xs='auto' sx={{ pt: 8, width: 'fit-content',  zIndex: 500 }}>        
-        <Typography variant='h1' fontSize={24}>Um selo sobre transformação:</Typography>
-        <Typography variant='h1' sx={{ mt: 2 }}>Encontrou a<br/>caixinha sorrindo?</Typography>
+        <Typography variant='h1' fontSize={24}>{topText}</Typography>
+        <Typography variant='h1' sx={{ mt: 2, whiteSpace: 'pre-wrap' }}>{h1}</Typography>
         <Link href='/sobre-nos' passHref>
           <a>
             <Button color='red' variant='contained' sx={{ ...defaultButtonStyle, mt: 3 }}>Saiba o que significa!</Button>
@@ -37,8 +40,8 @@ const DesktopHero = () => {
 const MobileHero = () => {
   return (
     <Stack direction='column' alignItems='flex-start' spacing={1} justifyContent='space-between'>
-      <Typography variant='h1' fontSize={16}>Um selo sobre transformação:</Typography>
-      <Typography variant='h1' fontSize={32} sx={{ mt: 2 }}>Encontrou a<br/>caixinha sorrindo?</Typography>
+      <Typography variant='h1' fontSize={16}>{topText}</Typography>
+      <Typography variant='h1' fontSize={32} sx={{ mt: 2 }}>{h1}</Typography>
       <Box sx={{ position: 'relative', width: '100%', height: '18rem', zIndex: 500, mt: '1.5rem!important' }}>
         <Image
           src='/images/selo-ja-foi-sucata-caixas-home.png'

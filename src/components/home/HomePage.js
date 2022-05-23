@@ -16,7 +16,7 @@ export const HomePage = () => {
       <HeroSection />
       <Container maxWidth='sm' sx={{ py: 8 }} >
         <Typography fontSize={'1.5rem'} textAlign='center' >
-          <strong>Junto com a Mag.</strong> nós criamos e recriamos ilimitadamente, a partir de materiais que não teriam outro fim, se não o lixo!
+          Uma iniciativa da <strong>Mag Embalagens</strong> que junto da empresa recicladora do seu grupo, coleta e seleciona resíduos de papéis e papelões da economia local que são convertidos para matéria-prima de novas caixas para e-commerce.
         </Typography>
       </Container>
       <TransformationCard />

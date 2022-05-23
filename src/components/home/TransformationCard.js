@@ -43,7 +43,7 @@ const Waste = () => {
       <Box sx={{ fontSize: 58, fontWeight: 500}}>
         <DefaultCountUp end={145000} />
       </Box>            
-      <Typography><strong>Quilos</strong> de sucata</Typography>
+      <Typography textAlign='center'><strong>Quilos</strong> de sucata foram<br/>coletados por nós localmente e</Typography>
     </Stack>
   )
 }
@@ -63,7 +63,7 @@ const Boxes = () => {
       <Box sx={{ fontSize: 58, fontWeight: 500}}>
         <DefaultCountUp end={750000} />
       </Box>
-      <Typography>Novas caixas da <strong>Mag.</strong></Typography>
+      <Typography textAlign='center'>Novas caixas<br/>da <strong>Mag.</strong></Typography>
     </Stack>
   )
 }
