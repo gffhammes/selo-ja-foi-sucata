@@ -22,7 +22,7 @@ export const HomePage = () => {
       <TransformationCard />
       <Container maxWidth='sm' sx={{ py: 8 }} >
         <Typography fontSize={'1.5rem'} textAlign='center' >
-        Para cada tonelada de papelão reciclado <strong>a derrubada de 20 a 30 árvores &#127795; adultas é evitada.</strong>
+          Para cada tonelada de papelão reciclado <strong>a derrubada de 20 a 30 árvores &#127795; adultas é evitada.</strong>
         </Typography>
       </Container>
       <ProcessSection />
