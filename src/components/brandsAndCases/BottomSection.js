@@ -2,6 +2,8 @@ import { Box, Container, Grid, Paper, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 import { defaultPaddingTop } from '../../constants/pagesStyle'
+import BlueSpike from '../../../public/vectors/blue-spike.svg'
+import RedCircleSpike from '../../../public/vectors/red-circle-spike.svg'
 
 const brands = [
   {
@@ -22,9 +24,32 @@ const brands = [
   },
 ]
 
+const blueSpikeStyle = {
+  position: 'absolute',
+  width: '13rem',
+  height: '13rem',
+  right: 0,
+  transform: { xs: 'translate(20%, -30%)', md: 'translate(70%, -30%)', lg: 'translate(50%, -30%)' }
+}
+
+const redCircleSpikeStyle = {
+  position: 'absolute',
+  width: '10rem',
+  height: '10rem',
+  left: 0,
+  bottom: 0,
+  transform: { xs: 'translate(-20%, 30%)', md: 'translate(-60%, 30%)', lg: 'translate(-100%, 40%)' },
+}
+
 const Brands = () => {
   return (
-    <Stack spacing={4} sx={{ width: { xs: '100%', md: 'unset' } }}>
+    <Stack spacing={4} sx={{ width: { xs: '100%', md: 'unset' }, position: 'relative' }}>
+      <Box sx={blueSpikeStyle}>        
+        <BlueSpike height='100%' width='100%'/>
+      </Box>
+      <Box sx={redCircleSpikeStyle}>        
+        <RedCircleSpike height='100%' width='100%'/>
+      </Box>
       <Stack direction={{ xs: 'column', sm: 'row' }} spacing={4} sx={{ width: '100%', transform: { xs: 'translateX(0)', md: 'translateX(7%)', lg: 'translateX(0)' } }}>
         {brands.slice(0, 2).map((brand, index) => (
           <Box key={index} sx={{ flex: 1 }}>
