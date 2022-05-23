@@ -21,8 +21,8 @@ const FooterMain = () => {
   return (
     <Stack spacing={4}>
       <Stack direction='row' alignItems='center' spacing={3}>        
-        <LogoMag height="75" width="115" />
-        <LogoSelo height="75" width="115" />
+        <LogoMag height="75" width="115" preserveAspectRatio="xMinYMin" />
+        <LogoSelo height="75" width="115" preserveAspectRatio="xMinYMin" />
       </Stack>
       <Stack sx={{ color: '#fff' }} spacing={{ xs: 2, md: 0 }}>        
         <Typography fontWeight={300}>Todos os direitos reservados ao Selo Já Foi Sucata</Typography>
