@@ -29,7 +29,6 @@ const DesktopHero = () => {
             layout='fill'
             objectFit='contain'
             objectPosition='right'
-            priority={true}
           />
         </Box>
       </Grid>
