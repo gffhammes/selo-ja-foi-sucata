@@ -7,7 +7,7 @@ import { useWindowSize } from '../../hooks/useWindowSize'
 import { defaultPaddingTop } from '../../constants/pagesStyle'
 
 const topText = 'Uma caixa feita de outras caixas:';
-const h1 = 'Encontrou a\ncaixinha sorrindo?';
+const h1 = 'Encontrou o selo\nda caixinha sorrindo?';
 
 const DesktopHero = () => {
   return (
