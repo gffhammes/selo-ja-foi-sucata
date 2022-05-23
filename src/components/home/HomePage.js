@@ -22,7 +22,7 @@ export const HomePage = () => {
       <TransformationCard />
       <Container maxWidth='sm' sx={{ py: 8 }} >
         <Typography fontSize={'1.5rem'} textAlign='center' >
-          <strong>Do lixo ao luxo,</strong> ou melhor, da reciclagem ao sonho! Aqui o papelão se transforma e recebe uma nova chance!
+        Para cada tonelada de papelão reciclado <strong>a derrubada de 20 a 30 árvores &#127795; adultas é evitada.</strong>
         </Typography>
       </Container>
       <ProcessSection />
