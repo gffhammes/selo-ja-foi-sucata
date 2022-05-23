@@ -32,7 +32,7 @@ const Stickers = () => {
   )
 }
 
-export const PinkSection = () => {
+const PinkSection = () => {
   return (
     <Box bgcolor='pink.main' >
       <Container>
@@ -52,3 +52,5 @@ export const PinkSection = () => {
     </Box>
   )
 }
+
+export default PinkSection;

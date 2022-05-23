@@ -10,7 +10,7 @@ const galleryImages = [
   '/images/gallery06.png',
 ]
 
-export const Gallery = () => {
+ const Gallery = () => {
   return (
     <Box
       bgcolor='green.main'
@@ -54,3 +54,5 @@ export const Gallery = () => {
     </Box>
   )
 }
+
+export default Gallery;

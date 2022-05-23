@@ -57,3 +57,5 @@ export const ProcessSection = () => {
     </Container>
   )
 }
+
+export default ProcessSection;

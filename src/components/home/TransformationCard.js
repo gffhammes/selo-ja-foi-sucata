@@ -121,10 +121,12 @@ const DesktopCard = () => {
   )
 }
 
-export const TransformationCard = () => {
+const TransformationCard = () => {
   const { width } = useWindowSize();
 
   return (
     width > 960 ? <DesktopCard /> : <MobileCard />
   )
 }
+
+export default TransformationCard;

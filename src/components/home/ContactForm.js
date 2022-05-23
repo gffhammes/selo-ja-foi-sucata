@@ -8,7 +8,7 @@ import { Input } from "../commons/form/Input"
 
 const textFieldStyle = { backgroundColor: 'white.main', borderRadius: '.5rem' }
 
-export const ContactForm = () => {
+const ContactForm = () => {
   const [submitting, setSubmitting] = useState(false)
   const [submittingStatus, setSubmittingStatus] = useState(null)
 
@@ -95,3 +95,5 @@ export const ContactForm = () => {
     </Box>
   )
 }
+
+export default ContactForm;

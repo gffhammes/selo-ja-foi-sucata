@@ -36,7 +36,7 @@ const DesktopBrands = () => {
   )
 }
 
-export const BrandsSection = () => {
+const BrandsSection = () => {
   const { width } = useWindowSize();
   const isMobile = width <= 960;
 
@@ -46,3 +46,5 @@ export const BrandsSection = () => {
     </Container>
   )
 }
+
+export default BrandsSection;

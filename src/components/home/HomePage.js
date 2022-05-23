@@ -1,13 +1,15 @@
 import { Box, Container, Typography } from '@mui/material'
 import React, { useEffect } from 'react'
+import dynamic from 'next/dynamic'
 import { HomePreFooter } from '../commons/PreFooter'
-import { BrandsSection } from './BrandsSection'
-import { ContactForm } from './ContactForm'
-import { Gallery } from './Gallery'
-import { HeroSection } from './HeroSection'
-import { PinkSection } from './PinkSection'
-import { ProcessSection } from './ProcessSection'
-import { TransformationCard } from './TransformationCard'
+const BrandsSection = dynamic(() => import('./BrandsSection'))
+const ContactForm = dynamic(() => import('./ContactForm'))
+const Gallery = dynamic(() => import('./Gallery'))
+const HeroSection = dynamic(() => import('./HeroSection'))
+const PinkSection = dynamic(() => import('./PinkSection'))
+const ProcessSection = dynamic(() => import('./ProcessSection'))
+const TransformationCard = dynamic(() => import('./TransformationCard'))
+
 
 export const HomePage = () => {
 
