@@ -36,7 +36,6 @@ const DesktopHero = () => {
   )
 }
 
-
 const MobileHero = () => {
   return (
     <Stack direction='column' alignItems='flex-start' spacing={1} justifyContent='space-between'>
@@ -44,7 +43,7 @@ const MobileHero = () => {
       <Typography variant='h1' fontSize={32} sx={{ mt: 2 }}>{h1}</Typography>
       <Box sx={{ position: 'relative', width: '100%', height: '18rem', zIndex: 500, mt: '1.5rem!important' }}>
         <Image
-          src='/images/selo-ja-foi-sucata-caixas-home.png'
+          src='/images/selo-ja-foi-sucata-caixas-home.webp'
           alt='Caixas Selo Já Foi Sucata'
           layout='fill'
           objectFit='contain'
